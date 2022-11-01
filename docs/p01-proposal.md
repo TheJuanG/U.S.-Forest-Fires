@@ -28,7 +28,7 @@ Keywords: forest fires, climate change
 
 1. The dataset on Redivis (derived from the U.S. Forest Service) provides information about U.S. forest fires from 1992 to 2022. It contains data such as fire location, size, cause, etc. Since the concern is climate change, this source will help in the preparation for future fires and their prevention. With this dataset, readers are able to be informed and even use it to create new resources (such as apps) to spread awareness about the world’s current state.
 
-2. Table & Citation
+2. 
 
 | Name                     | Purpose | Num. of observations | Num. of variables | Citation | URL |
 |--------------------------|---------|----------------------|-------------------|----------|-----|
@@ -37,12 +37,14 @@ Keywords: forest fires, climate change
 | US Fire Perimeters (table 2) | This dataset shows fire perimeters. | 46,557 | 31 | Redivis Demo Organization (2022). US Fire Perimeters. Redivis. (Dataset) [`link to site`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/9r58-8ckedbnhw) | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/9r58-8ckedbnhw) |
 | US Fires Compiled (table 3) | This dataset shows a summary of all recorded fires. | 1,880,465 | 38 | Redivis Demo Organization (2022). US Fires Compiled. Redivis. (Dataset) [`link to site`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/t935-9twa6qwpz) | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/t935-9twa6qwpz) |
 
-3. Provenance
-The data is distributed by the U.S. Forest Services (USFS), and the main contributor is Ian Mathews (data curator). The datasets were last updated on October 6, 2022 and dates back from as early as 1992. USFS, an agency under the U.S. Department of Agriculture, encourages citizens to use their data to create maps, apps, and other information products. Those who utilize this resource are able to make money with their creations. The dataset was obtained from Redivis, a site that allows different organizations to upload and manage datasets.
+3. The data is distributed by the U.S. Forest Services (USFS), and the main contributor is Ian Mathews (data curator). The datasets were last updated on October 6, 2022 and dates back from as early as 1992. USFS, an agency under the U.S. Department of Agriculture, encourages citizens to use their data to create maps, apps, and other information products. Those who utilize this resource are able to make money with their creations. The dataset was obtained from Redivis, a site that allows different organizations to upload and manage datasets.
 
 **Creator:** Redivis Demo Organization
+
 **Contributors:** Ian Mathews (Data curator)
+
 **Related identifiers:** https://data-usfs.hub.arcgis.com/
+
 **Citation:** Redivis Demo Organization (2022). US Forest Service Fires (v1.1). Redivis. 
 (Dataset) https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1
 
