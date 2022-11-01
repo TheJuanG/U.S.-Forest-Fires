@@ -1,16 +1,29 @@
 # U.S. Forest Fires: Project Proposal 
+Code Name: USFS
+Authors: Juan Carlos (juancg@uw.edu), Chantalle Matro (cmatro@uw.edu), Militha Madur (militham@uw.edu)
+Affiliation: INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
+Date: Autumn 2022
+Abstract:
+Keywords: forest fires, climate change
+
+## Introduction:
+
+## Problem Domain:
 
 ## Research Questions:
 
-1. What is the most frequent cause of forest fires?
+1. **What is the most frequent cause of forest fires?**
 - Knowing the source of these forest fires is vital in the implementation of prevention strategies. Wildfire agencies will also be able to prepare for the effects of the disaster and even advise citizens about the fires and steps to take.
-2. Which locations do forest fires most frequently occur?
+2. **Which locations do forest fires most frequently occur?**
 - Recognizing the locations in which forest fires happen the most allows for more attention to these vulnerable areas. This aids in prevention by being more aware of fire hazards and better preparation of fire engines.
-3. How do forest fires affect the environment?
+3. **How do forest fires affect the environment?**
 - Climate change is prevalent in the world, and forest fires are one of its greatest contributors because of their disruptive effects. Despite this, there may still be some benefits. It’s important to know these consequences to formulate better practices for preventing long-term rising shifts in temperature.
 
 ## Dataset:
 
+1. The dataset on Redivis (derived from the U.S. Forest Service) provides information about U.S. forest fires from 1992 to 2022. It contains data such as fire location, size, cause, etc. Since the concern is climate change, this source will help in the preparation for future fires and their prevention. With this dataset, readers are able to be informed and even use it to create new resources (such as apps) to spread awareness about the world’s current state.
+
+2. Table & Citation
 | Name                     | Purpose | Num. of observations | Num. of variables | Citation | URL |
 |--------------------------|---------|----------------------|-------------------|----------|-----|
 | US Forest Services Fires | This dataset provides U.S. public wildfire data distributed by the U.S. Forest Service. | - | - | Redivis Demo Organization (2022). US Forest Service Fires (v1.1). Redivis. (Dataset) [`link to site`](https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1) | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1) |
@@ -18,6 +31,14 @@
 | US Fire Perimeters (table 2) | This dataset shows fire perimeters. | 46,557 | 31 | Redivis Demo Organization (2022). US Fire Perimeters. Redivis. (Dataset) [`link to site`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/9r58-8ckedbnhw) | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/9r58-8ckedbnhw) |
 | US Fires Compiled (table 3) | This dataset shows a summary of all recorded fires. | 1,880,465 | 38 | Redivis Demo Organization (2022). US Fires Compiled. Redivis. (Dataset) [`link to site`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/t935-9twa6qwpz) | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/t935-9twa6qwpz) |
 
+3. Provenance
+The data is distributed by the U.S. Forest Services (USFS), and the main contributor is Ian Mathews (data curator). The datasets were last updated on October 6, 2022 and dates back from as early as 1992. USFS, an agency under the U.S. Department of Agriculture, encourages citizens to use their data to create maps, apps, and other information products. Those who utilize this resource are able to make money with their creations. The dataset was obtained from Redivis, a site that allows different organizations to upload and manage datasets.
+
+**Creator:** Redivis Demo Organization
+**Contributors:** Ian Mathews (Data curator)
+**Related identifiers:** https://data-usfs.hub.arcgis.com/
+**Citation:** Redivis Demo Organization (2022). US Forest Service Fires (v1.1). Redivis. 
+(Dataset) https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1
 
 ## Expected Implications:
 
