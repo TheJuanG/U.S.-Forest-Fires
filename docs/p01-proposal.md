@@ -14,7 +14,9 @@
 | Name                     | Purpose | Num. of observations | Num. of variables | Citation | URL |
 |--------------------------|---------|----------------------|-------------------|----------|-----|
 | US Forest Services Fires | This dataset provides U.S. public wildfire data distributed by the U.S. Forest Service. | - | - | Redivis Demo Organization (2022). US Forest Service Fires (v1.1). Redivis. (Dataset) [`link to site`](https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1) | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1) |
-| US Fire Origin Points (table 1) | This dataset shows fire origin points, including time, county, intensity level, cause, etc. | 328,985 | 78 | Redivis Demo Organization (2022). US Fire origin Points. Redivis. (Dataset) [`link to site`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/5r3s-4s2avr2eb?variable=initial_response) | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/5r3s-4s2avr2eb?variable=initial_response) |
+| US Fire Origin Points (table 1) | This dataset shows fire origin points, including time, county, intensity level, cause, etc. | 328,985 | 78 | Redivis Demo Organization (2022). US Fire Origin Points. Redivis. (Dataset) [`link to site`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/5r3s-4s2avr2eb?variable=initial_response) | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/5r3s-4s2avr2eb?variable=initial_response) |
+| US Fire Perimeters (table 2) | This dataset shows fire perimeters. | 46,557 | 31 | Redivis Demo Organization (2022). US Fire Perimeters. Redivis. (Dataset) [`link to site`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/9r58-8ckedbnhw) | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/9r58-8ckedbnhw) |
+| US Fires Compiled (table 3) \ This dataset shows a summary of all recorded fires. | 1,880,465 | 38 | Redivis Demo Organization (2022). US Fires Compiled. Redivis. (Dataset) [`link to site`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/t935-9twa6qwpz) | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/t935-9twa6qwpz) |
 
 
 ## Expected Implications:
