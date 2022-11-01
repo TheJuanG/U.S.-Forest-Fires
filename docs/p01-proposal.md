@@ -9,6 +9,12 @@
 3. How do forest fires affect the environment?
 - Climate change is prevalent in the world, and forest fires are one of its greatest contributors because of their disruptive effects. Despite this, there may still be some benefits. It’s important to know these consequences to formulate better practices for preventing long-term rising shifts in temperature.
 
+## Dataset:
+
+| Name                     | Purpose | Num. of observations | Num. of variables | Citation | URL |
+|--------------------------|---------|----------------------|-------------------|----------|-----|
+| US Forest Services Fires | This dataset provides U.S. public wildfire data distributed by the U.S. Forest Service. | - | - | Redivis Demo Organization (2022). US Forest Service Fires (v1.1). Redivis. (Dataset) [`link to site`](https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1) | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1) |
+
 ## Expected Implications:
 
 One of the expected implications is that we will be able to tell what type of environment and what starts forest fires. Also, in which locations the forest fires grow to be the biggest. This could help someone like the U.S. Forest Service to be able to see which areas are at higher risk of becoming fire hazards so that they are more prepared for them. And what causes the forest fires so that they could put out PSAs to make sure the community is also helping protect the forests.
