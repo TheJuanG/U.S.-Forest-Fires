@@ -1,9 +1,14 @@
 # U.S. Forest Fires: Project Proposal 
 Code Name: USFS
-Authors: Juan Carlos (juancg@uw.edu), Chantalle Matro (cmatro@uw.edu), Militha Madur (militham@uw.edu)
+
+Authors: Juan Carlos (juancg@uw.edu), Chantalle Matro (cmatro@uw.edu), Militha Madur (militham@uw.edu) 
+
 Affiliation: INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
+
 Date: Autumn 2022
+
 Abstract:
+
 Keywords: forest fires, climate change
 
 ## Introduction:
@@ -24,6 +29,7 @@ Keywords: forest fires, climate change
 1. The dataset on Redivis (derived from the U.S. Forest Service) provides information about U.S. forest fires from 1992 to 2022. It contains data such as fire location, size, cause, etc. Since the concern is climate change, this source will help in the preparation for future fires and their prevention. With this dataset, readers are able to be informed and even use it to create new resources (such as apps) to spread awareness about the world’s current state.
 
 2. Table & Citation
+
 | Name                     | Purpose | Num. of observations | Num. of variables | Citation | URL |
 |--------------------------|---------|----------------------|-------------------|----------|-----|
 | US Forest Services Fires | This dataset provides U.S. public wildfire data distributed by the U.S. Forest Service. | - | - | Redivis Demo Organization (2022). US Forest Service Fires (v1.1). Redivis. (Dataset) [`link to site`](https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1) | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1) |
