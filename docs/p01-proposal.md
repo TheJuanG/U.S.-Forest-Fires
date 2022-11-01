@@ -4,7 +4,7 @@
 
 ## Authors:
 
-Juan Carlos ([juancg\@uw.edu](mailto:juancg@uw.edu), Chantalle Matro ([cmatro\@uw.edu](mailto:cmatro@uw.edu), Militha Madur ([militham\@uw.edu](mailto:militham@uw.edu))
+Juan Carlos ([juancg\@uw.edu](mailto:juancg@uw.edu)), Chantalle Matro ([cmatro\@uw.edu](mailto:cmatro@uw.edu)), Militha Madur ([militham\@uw.edu](mailto:militham@uw.edu))
 
 ## Affiliation:
 
