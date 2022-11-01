@@ -63,9 +63,3 @@ Some of the fires have names while others don’t.
 
 One way to address the first limitation is to only include the ones that were caused by forest fires that were bigger than one acre. This is because the bigger the forest fire is, the more information there will likely be for it.
 To address the second limitation would be to address the fires by the location that they were at instead of the name given to them, whether it be the coordinates that were given or the state that they occurred in.
-
-
-For what to do, see the [`../instructions/`](../instructions/) directory, specifically: 
-
-* [Design Brief](../instructions/project-design-brief.pdf)
-* [Project Proposal Requirements](../instructions/p01-proposal-requirements.md)
