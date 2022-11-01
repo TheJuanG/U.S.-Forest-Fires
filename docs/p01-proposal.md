@@ -42,7 +42,7 @@ According to a 2022 United Nations reported conducted by more than 50 researcher
 
 ### Socioeconomic Context:
 
-Most of the damage caused by wildfires occurs in transitional areas that border businesses and homes as well as undeveloped areas. However, crowding and housing crises have resulted in states restricting development in densely populated cities. More people are moving further away from city centers, where housing costs are lower. Both of these factors have resulted in an expansion in development on the wildland-urban interface (WUI), which is a region near and part of flammable vegetation. As climate change as increases the risk and intensity of wildfires, millions of houses has been built and continues to be built in areas where the risks of fire are highest.\
+Most of the damage caused by wildfires occurs in transitional areas that border businesses and homes as well as undeveloped areas. However, crowding and housing crises have resulted in states restricting development in densely populated cities. More people are moving further away from city centers, where housing costs are lower. Both of these factors have resulted in an expansion in development on the wildland-urban interface (WUI), which is a region near and part of flammable vegetation. As climate change as increases the risk and intensity of wildfires, millions of houses has been built and continues to be built in areas where the risks of fire are highest.
 
 ![](https://lh6.googleusercontent.com/liA-8QpkurSZGZdu3dPM4kRRXlFqQOz8YXEkbiXsWqgXX-btOK9_O99lo5TP3fGoRe2CAAGAKZtH8zaVQVc0Bz208RiiynryJUoEuYxMHD7Uk6PMFpbukqebCAia6-leH5MXv2oQ5bd82MveCfQ3h1ncvcsoykyForiO9cRIGrXqTSQSgJiomWP0Cw)
 
