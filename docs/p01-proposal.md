@@ -7,7 +7,7 @@ Affiliation: INFO-201: Technical Foundations of Informatics - The Information Sc
 
 Date: Autumn 2022
 
-Abstract:
+Abstract: Our main concern is the role of forest fires in climate change. This is important because not only are there environmental consequences, but socioeconomic effects as well. To address this concern, we plan to examine a dataset provided by the U.S. Forest Service that contains information about past and recent U.S. forest fires. 
 
 Keywords: forest fires, climate change
 
