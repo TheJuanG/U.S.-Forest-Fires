@@ -1,0 +1,1 @@
+# Chart 1 - Mapping the loations/origin points of Forest Fires in the U.S.
