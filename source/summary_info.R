@@ -10,27 +10,27 @@ View(origin_points)
 
 summary_info <- list()
 
-# info 1
+# info 1: number of observations
 summary_info$origin_num_observations <- nrow(origin_points)
 
-# info 2
+# info 2: most frequent state as origin
 summary_info$max_state_origin <- origin_points %>%
   filter(STATE_NAME == max(STATE_NAME, na.rm = TRUE)) %>%
   select(STATE_NAME)
 
-# info 3
+# info 3: most frequent statistical cause
 summary_info$stat_cause <- origin_points %>%
   filter(STATISTICAL_CAUSE == max(STATISTICAL_CAUSE, na.rm = TRUE)) %>%
   select(STATISTICAL_CAUSE)
 
-# U.S. Fire Perimeters
+# U.S. Fire Perimeters Data
 perimeters <- read_csv('https://media.githubusercontent.com/media/info201a-au2022/project-group-2-section-af/main/data/US_Fire_Perimeters.csv')
 View(perimeters)
 
-# info 4
+# info 4: number of observations
 summary_info$perimeters_num_observations <- nrow(perimeters)
 
-# info 5
+# info 5: largest total acres
 summary_info$max_total_acres <- perimeters %>%
   filter(TOTALACRES == max(TOTALACRES, na.rm = TRUE)) %>%
   select(TOTALACRES)
