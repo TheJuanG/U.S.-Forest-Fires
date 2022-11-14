@@ -17,7 +17,6 @@ summary_info$fire_size <- names(which.max(table(origin_points$FIRE_SIZE_CLASS)))
 summary_info$max_state_origin <- names(which.max(table(origin_points$STATE_NAME)))
 
 # info 3: most common statistical cause
-
 summary_info$stat_cause <- names(which.max(table(origin_points$STATISTICAL_CAUSE)))
 
 # U.S. Fire Perimeters Data
