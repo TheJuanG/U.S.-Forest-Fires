@@ -27,10 +27,10 @@ summary_info$stat_cause <- origin_points %>%
 perimeters <- read_csv('https://media.githubusercontent.com/media/info201a-au2022/project-group-2-section-af/main/data/US_Fire_Perimeters.csv')
 View(perimeters)
 
-# info 3
+# info 4
 summary_info$perimeters_num_observations <- nrow(perimeters)
 
-# info 4
+# info 5
 summary_info$max_total_acres <- perimeters %>%
   filter(TOTALACRES == max(TOTALACRES, na.rm = TRUE)) %>%
   select(TOTALACRES)
