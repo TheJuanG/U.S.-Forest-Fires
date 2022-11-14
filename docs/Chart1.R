@@ -2,33 +2,54 @@
 
 # loading U.S. Fire Origin Points Data
 library(tidyverse)
-library(ggplot2)
-library(maps)
-library(leaflet)
+library(plotly)
+
 data <- read_csv('https://media.githubusercontent.com/media/info201a-au2022/project-group-2-section-af/main/data/US_Fire_Origin_Points.csv')
 View(data)
+fires_1990_2021 <- data %>% filter(DISCOVER_YEAR >= 1990) %>% filter(FIRE_SIZE_CLASS != "-")
+# changing default color scale title
+c <- list(colorbar = list(title = "Fire Size"))
+# geo styling
+g <- list(
+  scope = 'north america',
+  showland = TRUE,
+  landcolor = toRGB("grey83"),
+  subunitcolor = toRGB("white"),
+  countrycolor = toRGB("white"),
+  showlakes = TRUE,
+  lakecolor = toRGB("white"),
+  showsubunits = TRUE,
+  showcountries = TRUE,
+  resolution = 50,
+  projection = list(
+    type = 'conic conformal',
+    rotation = list(lon = -100)
+  ),
+  lonaxis = list(
+    showgrid = TRUE,
+    gridwidth = 0.5,
+    range = c(-140, -55),
+    dtick = 5
+  ),
+  lataxis = list(
+    showgrid = TRUE,
+    gridwidth = 0.5,
+    range = c(20, 60),
+    dtick = 5
+  )
+)
 
-# get table of just latitudes and longitudes 
-latitudes <- data %>% group_by(INITIAL_RESPONSE) %>% summarize(lat = (POO_LATITUDE))
-longitudes <- data %>% group_by(INITIAL_RESPONSE) %>% summarize(long = (POO_LONGITUDE))
-origin_location <- left_join(latitudes, longitudes, by = "INITIAL_RESPONSE")
-origin_location <- origin_location[complete.cases(origin_location),]
-origin_location <- origin_location %>% mutate(date = as.Date(INITIAL_RESPONSE, "%m/%d/%Y"))
+fig <- plot_geo(fires_1990_2021, lat = ~POO_LATITUDE, lon = ~POO_LONGITUDE, color = ~FIRE_SIZE_CLASS, colors = "YlOrRd")
+fig <- fig %>% add_markers(
+  text = ~paste(fires_1990_2021$FIRE_SIZE_CLASS), hoverinfo = "text"
+)
+fig <- fig %>% layout(title = 'Origin and Size of U.S. Forest Fires 1990-2021', geo = g)
 
-# most recent date 5-30-21
-year_2000_2021 <- origin_location %>% filter(date < "0023-01-01" ) 
-year_2000_2021 <- year_2000_2021 %>% arrange(desc(date))
-year_2010_2021 <- year_2000_2021 %>% filter(date >= "0010-01-01" )
-year_2000_2010 <- year_2000_2021 %>% filter(date < "0011-01-01")
-year_2018_2021 <- year_2000_2021 %>% filter(date >= "0018-01-01")
+fig 
 
-m <- leaflet(year_2018_2021) %>% 
-  addTiles()  %>% 
-  setView( lat=40, lng=-97 , zoom=2.5) %>%
-  addProviderTiles("CartoDB.Positron") %>%
-  addMarkers(~long, ~lat, popup = ~as.character(INITIAL_RESPONSE))  
-m
-  #addLegend( pal=mypalette, values=~mag, opacity=0.9, title = "Magnitude", position = "bottomright" )
+
+
+
 
  
 
