@@ -110,3 +110,15 @@ In the Statistical_cause column, the cause of the fire, some of the entries can 
 ### Addressing the Limitations:
 
 One way to address the first limitation is to only include the ones that were caused by forest fires that were bigger than one acre. This is because the bigger the forest fire is, the more information there will likely be for it. To address the second limitation would be to address the fires by the location that they were at instead of the name given to them, whether it be the coordinates that were given or the state that they occurred in.
+
+## References:
+
+Popovich, Nadja, and Brad Plumer. "As Wildfires Grow, Millions of Homes Are Being Built in Harm's Way." The New York Times, The New York Times, 9 Sept. 2022, <https://www.nytimes.com/interactive/2022/09/09/climate/growing-wildfire-risk-homes.html>.
+
+Redivis Demo Organization (2022). US Forest Service Fires (v1.1). Redivis. (Dataset) <https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1>
+
+"Wildfire Causes and Evaluations (U.S. National Park Service)." National Parks Service, U.S. Department of the Interior, <https://www.nps.gov/articles/wildfire-causes-and-evaluation.htm>.
+
+"Wildfire Climate Connection." National Oceanic and Atmospheric Administration, <https://www.noaa.gov/noaa-wildfire/wildfire-climate-connection#>:\~:text=Research%20shows%20that%20changes%20in,fuels%20during%20the%20fire%20season.
+
+Zhong, Raymond. "Climate Scientists Warn of a 'Global Wildfire Crisis'." The New York Times, The New York Times, 23 Feb. 2022, <https://www.nytimes.com/2022/02/23/climate/climate-change-un-wildfire-report.html>.
