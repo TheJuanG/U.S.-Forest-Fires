@@ -12,12 +12,12 @@ library(tidyverse)
 library(plotly)
 
 ```{r setup, include=FALSE}
-#source("../source/table_info.R")
-#source("..source/summary_info.R")
+source("../source/summary_info.R")
+source("../source/table_info.R")
 source("../docs/Chart1.R")
 source("../docs/Chart2.R")
 source("../docs/Chart3.R")
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
 ```
 
 ## Overview
@@ -28,17 +28,22 @@ Below is a report that summarizes forest fires in the United States from 1900-20
 
 ### Table 1 - U.S. Fire Origin Points Summary
 
-(table here)
-
+```{r echo = FALSE}
+table_info
+```
 ### Table 2 - U.S. Fire Perimeters Summary
 
-(table here)
+```{r echo = FALSE}
+table_info_2
+```
 
 These tables summarize the most relevant data from the U.S. Fire Origin Points and U.S. Fire Perimeters data sets. For each state available on the former data set, their respective counties which have experienced the most fires were retrieved. The table also shows the most common fire size and causes for each state. The latter data set was grouped by the year fires occurred, and the largest total acres and common causes were logged.
 
 ## Charts
 
 ### Chart 1 - Mapping the locations/origin points of Forest Fires in the U.S.
+
+Here is the map:
 
 ```{r echo = FALSE}
 fig
@@ -50,7 +55,9 @@ Chart one is a map of the origin points and size classifications of forest fires
 
 Here is the bar graph:
 
-(chart here)
+```{r echo = FALSE}
+graph
+```
 
 Chart two is a bar graph that shows the frequency of the causes of forest fires in the United States. The purpose of this chart is to see what the biggest threats are to starting the forest fires. The biggest cause that was shown was lightning. Lightning was much greater than even the second biggest cause, which was camp fires. The two lowest causes were railroad and children.
 
