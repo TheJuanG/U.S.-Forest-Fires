@@ -11,13 +11,13 @@ View(origin_points)
 summary_info <- list()
 
 # info 1: most common fire size/class
-summary_info$fire_size <- names(which.max(table(origin_points$FIRE_SIZE_CLASS)))
+summary_info$common_fire_size <- names(which.max(table(origin_points$FIRE_SIZE_CLASS)))
   
 # info 2: most common state as origin
-summary_info$max_state_origin <- names(which.max(table(origin_points$STATE_NAME)))
+summary_info$common_state_origin <- names(which.max(table(origin_points$STATE_NAME)))
 
 # info 3: most common statistical cause
-summary_info$stat_cause <- names(which.max(table(origin_points$STATISTICAL_CAUSE)))
+summary_info$common_stat_cause <- names(which.max(table(origin_points$STATISTICAL_CAUSE)))
 
 # U.S. Fire Perimeters Data
 perimeters <- read_csv('https://media.githubusercontent.com/media/info201a-au2022/project-group-2-section-af/main/data/US_Fire_Perimeters.csv')
