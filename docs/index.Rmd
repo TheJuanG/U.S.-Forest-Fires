@@ -10,9 +10,9 @@ library(knitr)
 ```{r setup, include=FALSE}
 source("../source/table_info.R")
 source("../source/summary_info.R")
-source("../docs/Chart1.R")
-source("../docs/Chart2.R")
-source("../docs/Chart3.R")
+source("../source/Chart1.R")
+source("../source/Chart2.R")
+source("../source/Chart3.R")
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -36,7 +36,7 @@ These tables summarize the most relevant data from the U.S. Fire Origin Points a
 
 ### Chart 1 - Mapping the locations/origin points of Forest Fires in the U.S.
 
-```{r}
+```{r echo=FALSE}
 fig
 ```
 
