@@ -6,7 +6,7 @@ library(dplyr)
 source("~/Documents/info201/assignments/project-group-2-section-af/source/summary_info.R")
 
 # U.S. Fire Origin Points Summary Table
-
+  
 # code retrieved from 
 # https://exploratory.io/note/kanaugust/1701090969905358#:~:text=Mode%20Function,write%20a%20custom%20R%20function.
 calculate_mode <- function(x) {
@@ -24,3 +24,13 @@ table_info_2 <- perimeters %>%
   group_by(FIREYEAR) %>% 
   summarize(max_total_acres = max(TOTALACRES, na.rm = TRUE),
             common_causes = calculate_mode(STATCAUSE))
+
+# working code
+# cause_occurrence <- origin_points %>% 
+#   group_by(STATE_NAME, STATISTICAL_CAUSE) %>% 
+#   summarize(highest_cause = n(),.groups = 'drop')
+# 
+# common_cause <- cause_occurrence %>% 
+#   group_by(STATE_NAME) %>% 
+#   filter(highest_cause == max(highest_cause, na.rm = TRUE))  %>% 
+#   select(-highest_cause)
