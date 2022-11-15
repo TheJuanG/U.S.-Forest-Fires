@@ -24,13 +24,3 @@ table_info_2 <- perimeters %>%
   group_by(FIREYEAR) %>% 
   summarize(max_total_acres = max(TOTALACRES, na.rm = TRUE),
             common_causes = calculate_mode(STATCAUSE))
-
-# working code
-# cause_occurrence <- origin_points %>% 
-#   group_by(STATE_NAME, STATISTICAL_CAUSE) %>% 
-#   summarize(highest_cause = n(),.groups = 'drop')
-# 
-# common_cause <- cause_occurrence %>% 
-#   group_by(STATE_NAME) %>% 
-#   filter(highest_cause == max(highest_cause, na.rm = TRUE))  %>% 
-#   select(-highest_cause)
