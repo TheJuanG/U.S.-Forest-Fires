@@ -1,7 +1,7 @@
 ---
-title: "Your Project Title"
-author: "project team members"
-date: "1/22/2022"
+title: "U.S. Forest Fires"
+author: "Juan Carlos (juancg@uw.edu), Chantalle Matro (cmatro@uw.edu), Militha Madur (militham@uw.edu)"
+date: "11/14/2022"
 output: html_document
 ---
 
@@ -9,46 +9,27 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## What is this file for?
+## Overview
 
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
+Below is a report that summarizes forest fires in the United States from 1900-2021. Two different data sets were analyzed - U.S. Fire Origins ([source](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/5r3s-4s2avr2eb?variable=initial_response)) and U.S. Fire Perimeters ([source](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/9r58-8ckedbnhw)). Over this time period, key insights included the following. The most common statistical cause of forest fires in the U.S. was lightning. The greatest number of fires occurred in 2017. Most fires originated in California. The maximum total acreage a forest fire spanned was 3,611,520 acres, while the most common fire size classification was level A, which corresponds to .00-0.25 acres. Additionally, this report includes three different visualizations that break down each of these parameters specifically.
 
-* Please see Canvas for more details.
+## Table
 
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
-```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
-# then "source" an R file (data_access.R)
-source("../source/data_access.R")
-data_access_test()
-```
+## Charts
+### Chart 1 - Mapping the locations/origin points of Forest Fires in the U.S.
 
-### Example 2: Initialize a variable and then use it
-```{r}
-# Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
-```
+(chart here)
 
-> `r msg` Hope you have a good day!! 
+Chart one is a map of the origin points and size classifications of forest fires in the United States from 1990-2021. This date range was chosen in order to focus future analysis on the effects of climate change on the origin and spread of forest fires. The location of each point represents the origin point of the forest fire and the corresponding color identifies the forest fire size classification of the fire. The purpose of this graph is to map the most frequent locations/regions of forest fires as well as the range of fire sizes. The region with the greatest number of forest fire origin points is the Western United States, more specifically the West Coast (California). Additionally, the Western United States has the greatest number of forest fires that are classified as G in forest fire size, which is greater than 5000 acres. The map also shows that the origin points of forest fires that affect the United States are not limited to starting in the United States. Many forest fires originated in Canada, Mexico, and nearby islands.
 
-## ABOUT THIS FILE: 
+### Chart 2 - Visualization for the most frequent cause on BarChart
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+(chart here)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Chart two is a bar graph that shows the frequency of the causes of forest fires in the United States. The purpose of this chart is to see what the biggest threats are to starting the forest fires. The biggest cause that was shown was lightning. Lightning was much greater than even the second biggest cause, which was camp fires. The two lowest causes were railroad and children. 
 
-```{r cars}
-summary(cars)
-```
+### Chart 3 - Visualization for the density of fires for every year
 
-## Including Plots
+(chart here)
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Chart three is a density chart of the fires in every year. This chart was used to show the trend of the density of fires per year since 1900 until up to  2021. From this density chart you can see that the density of fires per year has been increasing year by year. In 1925 the density of fires was around .004 and now it is at a little above .020. The density of fires per year since 1925 has increased by more than four times.
