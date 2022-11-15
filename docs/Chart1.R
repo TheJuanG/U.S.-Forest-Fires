@@ -7,9 +7,10 @@ library(plotly)
 data <- read_csv('https://media.githubusercontent.com/media/info201a-au2022/project-group-2-section-af/main/data/US_Fire_Origin_Points.csv')
 View(data)
 fires_1990_2021 <- data %>% filter(DISCOVER_YEAR >= 1990) %>% filter(FIRE_SIZE_CLASS != "-")
-# changing default color scale title
+
+
 c <- list(colorbar = list(title = "Fire Size"))
-# geo styling
+
 g <- list(
   scope = 'north america',
   showland = TRUE,
@@ -38,6 +39,8 @@ g <- list(
     dtick = 5
   )
 )
+# code to build the background map referenced from plotly library website
+# https://plotly.com/r/scatter-plots-on-maps/ 
 
 fig <- plot_geo(fires_1990_2021, lat = ~POO_LATITUDE, lon = ~POO_LONGITUDE, color = ~FIRE_SIZE_CLASS, colors = "YlOrRd")
 fig <- fig %>% add_markers(
