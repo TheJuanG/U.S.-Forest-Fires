@@ -5,14 +5,15 @@ date: "11/14/2022"
 output: html_document
 ---
 
-#install.packages("knitr")
+
+
+
+```{r setup, include=FALSE}
 library(knitr)
 library(dplyr)
 library(ggplot2)
 library(tidyverse)
 library(plotly)
-
-```{r setup, include=FALSE}
 source("../source/summary_info.R")
 source("../source/table_info.R")
 source("../docs/Chart1.R")
@@ -35,13 +36,13 @@ specifically.
 
 ### Table 1 - U.S. Fire Origin Points Summary
 
-```{r echo = FALSE}
-kable('html',table_info, col.names = c("state name", "county most fires", "common fire size", "common causes"))
+```{r echo = FALSE, results = 'asis'}
+kable(table_info,"simple", col.names = c("state name", "county most fires", "common fire size", "common causes"))
 ```
 ### Table 2 - U.S. Fire Perimeters Summary
 
 ```{r echo = FALSE}
-kable('html', table_info_2, col.names = c("fire year", "max total acres", "common_causes"))
+kable(table_info_2,"simple", col.names = c("fire year", "max total acres", "common causes"))
 ```
 
 These tables summarize the most relevant data from the U.S. Fire Origin Points and U.S. Fire Perimeters data sets. For each state available on the
