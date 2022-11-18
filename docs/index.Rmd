@@ -36,12 +36,12 @@ specifically.
 ### Table 1 - U.S. Fire Origin Points Summary
 
 ```{r echo = FALSE}
-kable(table_info, col.names = c("state_name", "county_most_fires", "common_fire_size", "common_causes"))
+kable('html',table_info, col.names = c("state name", "county most fires", "common fire size", "common causes"))
 ```
 ### Table 2 - U.S. Fire Perimeters Summary
 
 ```{r echo = FALSE}
-kable(table_info_2, col.names = c("fire_year", "max_total_acres", "common_causes"))
+kable('html', table_info_2, col.names = c("fire year", "max total acres", "common_causes"))
 ```
 
 These tables summarize the most relevant data from the U.S. Fire Origin Points and U.S. Fire Perimeters data sets. For each state available on the
