@@ -12,7 +12,9 @@ graph <- ggplot(data, aes(x=STATISTICAL_CAUSE)) +
   geom_bar(width = 0.7) +
   labs(x = "Causes", y = "Number of Fires Caused", title = "The Causes of Forest Fires") +
   scale_y_continuous(labels = label_number(suffix = " K", scale = 1e-3)) +
-  theme_bw()
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) # make x-axis labels readable
+graph
+
 
 # Scale_y_continuous used to make y values easier to read.
 
