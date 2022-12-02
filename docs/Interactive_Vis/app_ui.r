@@ -1,7 +1,7 @@
-
 library(shiny)
 library(ggplot2)
 # Page 1 -------------------------------------------------
+# create tab
 intro_panel <- tabPanel(
   "Introduction",
   fluidPage(
@@ -43,15 +43,17 @@ intro_panel <- tabPanel(
   )
 )
 # Page 2 -------------------------------------------------
+
 # define following 
+class <- unique(fire_freq_per_yr$fire_size_class)
+class <- append(class, "overall")
 
 # create the tab
-class <- unique(compiled$fire_size_class)
-class <- append(class, "overall")
 time_graph_panel <- tabPanel(
   "Fires Over Time",
   h2("Evolution of Forest Fires"),
   
+  # slider bar layout content
   sidebarLayout(
     sidebarPanel(
       selectInput("size_class", label = strong("Select Overall or Fire Size Classification"), 
@@ -64,11 +66,13 @@ time_graph_panel <- tabPanel(
                   value = c(1992, 2015), sep = "")
       
     ),
+    # main panel layout content
     mainPanel(
       plotlyOutput(outputId = "scatter")
       
     )
   ),
+  # Description of Graph
   h3("What is the trend in frequency of forest fires in the United States?"),
   p("The graph above allows you to view the total number of forest fires per each fire size classification determined by the National Wildlife Coordinating Group (NWCG) for each year.
     The year slider can be used to change the range of years displayed. Fire size classification is a direct measure of the perimeter of a forest fire. This purpose of this graph is to analyze 
@@ -78,7 +82,7 @@ time_graph_panel <- tabPanel(
 # Define UI
 ui <- navbarPage(
   theme = bs_theme(bootswatch = "solar"),
-  "practice",      # application title 
+  "USFDS",      # application title 
   intro_panel,            # intro page
   time_graph_panel, 
 )
