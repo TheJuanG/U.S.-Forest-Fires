@@ -10,7 +10,7 @@ intro_panel <- tabPanel(
     imageOutput("forestfires"),
     br(), br(), br(),
     h3("Introduction:"),
-    p("Forest fires becoming increasingly severe in intensity and frequency across the United States. According to the NOAA, each wildfire season from 2020 to 2022 
+    p("Forest fires are becoming increasingly severe in intensity and frequency across the United States. According to the NOAA, each wildfire season from 2020 to 2022 
     has exceeded the average of 1.2 million acres burned since 2016. As these fires continue to evolve to become more aggessive in response to climate change, communities,
       and the environment are increasingly threatened. We aim to identify most common causes of forest fires, highest at risk regions for fires, 
       and the impact of forest fires on the environment in order to better inform policy and fire prevention/management efforts."),
