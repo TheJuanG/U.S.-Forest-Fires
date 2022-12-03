@@ -22,9 +22,11 @@ intro_panel <- tabPanel(
            In regions with histories of forest fires, the intensity and acreage of fires has vastly increased. Decreased rainfall and humidity have also increased the 
            flammability of vegetation, increasing the abundance of forest fire fuel, frequency of fires, and span of fires."),
     br(),
-    strong("Socioeconomic:"), p("Human-caused global warming and climate change has resulted in record high temperatures and dryness that has resulted in devastating fires.
-           In regions with histories of forest fires, the intensity and acreage of fires has vastly increased. Decreased rainfall and humidity have also increased the 
-           flammability of vegetation, increasing the abundance of forest fire fuel, frequency of fires, and span of fires."),
+    strong("Socioeconomic:"), p("Most wildfire damage occurs in transitional areas that border businesses and homes and undeveloped areas. 
+    However, crowding and housing crises have resulted in states restricting development in densly populated cities. 
+    More people are moving further away from city centers to where housing costs are lower. 
+    Both of these factors have resulted in an expansion in development on the wildland-urban interface (WUI), 
+    which is a region near and part of flammable vegetation (Popovich, Plumber, NY Times 2022)."),
     br(),
     strong("Stakeholders:"),
     br(),
