@@ -81,7 +81,7 @@ One potential benefit of data and technology driven interventions is implementin
 2.  
 
 | Name                            | Purpose                                                                                     | Num. of observations | Num. of variables | Citation                                                                                                                                                                  | URL                                                                                                  |
-|---------------------------------|---------------------------------------------------------------------------------------------|----------------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+|-----------|-----------|-----------|-----------|--------------------|-----------|
 | US Forest Services Fires        | This dataset provides U.S. public wildfire data distributed by the U.S. Forest Service.     | \-                   | \-                | Redivis Demo Organization (2022). US Forest Service Fires (v1.1). Redivis. (Dataset) <https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1>                                  | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1)                                           |
 | US Fire Origin Points (table 1) | This dataset shows fire origin points, including time, county, intensity level, cause, etc. | 328,985              | 78                | Redivis Demo Organization (2022). US Fire Origin Points. Redivis. (Dataset) <https://redivis.com/datasets/5k9t-07xsg7ckc/tables/5r3s-4s2avr2eb?variable=initial_response> | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/5r3s-4s2avr2eb?variable=initial_response) |
 | US Fire Perimeters (table 2)    | This dataset shows fire perimeters.                                                         | 46,557               | 31                | Redivis Demo Organization (2022). US Fire Perimeters. Redivis. (Dataset) <https://redivis.com/datasets/5k9t-07xsg7ckc/tables/9r58-8ckedbnhw>                              | [`URL`](https://redivis.com/datasets/5k9t-07xsg7ckc/tables/9r58-8ckedbnhw)                           |
@@ -124,6 +124,9 @@ Redivis Demo Organization (2022). US Forest Service Fires (v1.1). Redivis. (Data
 "Wildfire Climate Connection." National Oceanic and Atmospheric Administration, <https://www.noaa.gov/noaa-wildfire/wildfire-climate-connection#>:\~:text=Research%20shows%20that%20changes%20in,fuels%20during%20the%20fire%20season.
 
 Zhong, Raymond. "Climate Scientists Warn of a 'Global Wildfire Crisis'." The New York Times, The New York Times, 23 Feb. 2022, <https://www.nytimes.com/2022/02/23/climate/climate-change-un-wildfire-report.html>.
+
+### Image References:
+Mcnew, David. “The Windy Fire Burning in the Long Meadow Grove in Sequoia National Forest in California Earlier This Year.” The New York Times, 2021, https://www.nytimes.com/2021/11/17/climate/climate-change-wildfire-risk.html. 
 
 ### Code References:
 

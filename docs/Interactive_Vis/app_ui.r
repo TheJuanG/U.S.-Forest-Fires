@@ -1,14 +1,17 @@
-library(shiny)
-library(ggplot2)
+# This file contains all of the UI code used to build the multi-page shiny app
 # Page 1 -------------------------------------------------
-# create tab
+# create tab for intro page
 intro_panel <- tabPanel(
   "Introduction",
   fluidPage(
     h1("U.S. Forest Fires"),
     br(), 
+    # show landing image
     imageOutput("forestfires"),
+    p("source: NY Times: Fire burning in Long Meadow Grove in Sequoia National Forest 
+    Credit...David Mcnew/Getty Images"),
     br(), br(), br(),
+    # Intro and summary
     h3("Introduction:"),
     p("Forest fires are becoming increasingly severe in intensity and frequency across the United States. According to the NOAA, each wildfire season from 2020 to 2022 
     has exceeded the average of 1.2 million acres burned since 2016. As these fires continue to evolve to become more aggessive in response to climate change, communities,
@@ -29,20 +32,42 @@ intro_panel <- tabPanel(
     br(),
     em("Wildfire Agencies:"), p("Wildfire agencies and fire departments develop and carry out interventions to curb and eliminate fires. Their aims are to ensure the safety of firefighters, 
                                 reduce or eliminate the fire such that it doesn’t harm residents, and the most environmental benefit from the fire is received."),
+    em("Meteorological/climate Agencies:"), p("wildfires cause changes in air quality, temperature, dryness, rainfall, and other measures of climate and weather. 
+                                              Wildfires can cause long-term changes in the temperament of a region."),
+    
+    strong("Human Values:"),
+    br(),
+    em("1. Environmental Sustainability:"),
+    em("2. Safety:"),
+    p("The interventions designed to fight and prevent forest fires must balance the impact on the environment as well as prioritizing the safety of people and their communities.
+      Additionally, choosing which interventions to enact represents another value tension. For example, prescribed burns are encouraged as a way to create more resilient forests, 
+      however too many fires put residents and their families at risk."),
     h3("Research Questions:"),
     strong("1. What is trend in frequency of forest fires?"), 
+    p("This question investigates the number of forest fires per year nationally over the past few decades. This is important in 
+      order to determine if more resources are needed to effectively fight fires."),
     br(),
     strong("2. Which locations do forest fires most frequently occur?"), br(),
+    p("This question investigates the most common locations of forest fires over the past few decades. In order to determine if some areas are at higher risk to 
+      forest fire exposure, which can lead to better allocation of wildfire agency resources and better prepare residents of those areas."),
+    br(),
     strong("3. What is the most frequent cause of forest fires?"),
-    
+    p("Forest fires have a variety of different causes as determined by the USFDS. It is important to know what is the most common cause of these incidents in order 
+      to better educate people about how their individual actions can also impact forest fires."),
     h3("Datasets:"), 
-    p("The following findings are analyzed from three different datasets from Redivis:"),
-    p("1. A list of forest fires in the United States ranging from 1992-2015, with 1,880,465 total entries"),
-    p("2. A list of forest fires with origin points information in the United States ranging from 1950-2021, with 328,985 total entries"),
-    p("3. A list of forest fires with fire perimeters in the United States ranging from 1750 to 2019 with 46,557 total entries")
+    p("The dataset analyzed is the US Forest Service Fires hosted on Redvis, which is a data platform for academic research. This dataset was curated 
+      by Ian Mathews and is derived from the U.S. Forest Service - Geospatial Data 
+      Discovery. The dataset is comprised of the following three files."),
+    strong("1. A compiled list of forest fires in the United States ranging from 1992-2015, with 1,880,465 total entries"),
+    strong("2. A list of forest fires with origin points information in the United States ranging from 1950-2021, with 328,985 total entries"),
+    strong("3. A list of forest fires with fire perimeters in the United States ranging from 1750 to 2019 with 46,557 total entries"),
+    p("After exploratory analysis of all three data files, it was determined that data files 2 and 3 were too incomplete and insufficient sources.
+      in the larger context of national forest fires. Therefore, visualizations in this interactive report are created using the compiled dataset.")
+    # add key findings to intro page -> Chantalle
   )
 )
 # Page 2 -------------------------------------------------
+# Fires Over Time - investigating fire frequency
 
 # define following 
 class <- unique(fire_freq_per_yr$fire_size_class)
@@ -69,7 +94,6 @@ time_graph_panel <- tabPanel(
     # main panel layout content
     mainPanel(
       plotlyOutput(outputId = "scatter")
-      
     )
   ),
   # Description of Graph
@@ -82,7 +106,7 @@ time_graph_panel <- tabPanel(
 # Define UI
 ui <- navbarPage(
   theme = bs_theme(bootswatch = "solar"),
-  "USFDS",      # application title 
+  "Final Project",      # application title 
   intro_panel,            # intro page
   time_graph_panel, 
 )
