@@ -8,9 +8,9 @@ intro_panel <- tabPanel(
     br(), 
     # show landing image
     imageOutput("forestfires"),
-    p("source: NY Times: Fire burning in Long Meadow Grove in Sequoia National Forest 
-    Credit...David Mcnew/Getty Images"),
-    br(), br(), br(),
+    p("source: NY Times: Fire burning in Long Meadow Grove in Sequoia National Forest"), 
+    p("Credit...David Mcnew/Getty Images"),
+    br(),
     # Intro and summary
     h3("Introduction:"),
     p("Forest fires are becoming increasingly severe in intensity and frequency across the United States. According to the NOAA, each wildfire season from 2020 to 2022 
@@ -29,10 +29,9 @@ intro_panel <- tabPanel(
     strong("Stakeholders:"),
     br(),
     em("General public:"), p("Forest fires can threaten their homes and communities. Active fires can cause severe health risks due to smoke inhalation and reduced air quality."),
-    br(),
     em("Wildfire Agencies:"), p("Wildfire agencies and fire departments develop and carry out interventions to curb and eliminate fires. Their aims are to ensure the safety of firefighters, 
                                 reduce or eliminate the fire such that it doesn’t harm residents, and the most environmental benefit from the fire is received."),
-    em("Meteorological/climate Agencies:"), p("wildfires cause changes in air quality, temperature, dryness, rainfall, and other measures of climate and weather. 
+    em("Meteorological/climate Agencies:"), p("Wildfires cause changes in air quality, temperature, dryness, rainfall, and other measures of climate and weather. 
                                               Wildfires can cause long-term changes in the temperament of a region."),
     
     strong("Human Values:"),
@@ -59,19 +58,24 @@ intro_panel <- tabPanel(
       by Ian Mathews and is derived from the U.S. Forest Service - Geospatial Data 
       Discovery. The dataset is comprised of the following three files."),
     strong("1. A compiled list of forest fires in the United States ranging from 1992-2015, with 1,880,465 total entries"),
+    br(),
     strong("2. A list of forest fires with origin points information in the United States ranging from 1950-2021, with 328,985 total entries"),
+    br(),
     strong("3. A list of forest fires with fire perimeters in the United States ranging from 1750 to 2019 with 46,557 total entries"),
-    p("After exploratory analysis of all three data files, it was determined that data files 2 and 3 were too incomplete and insufficient sources.
-      in the larger context of national forest fires. Therefore, visualizations in this interactive report are created using the compiled dataset.")
+    br(), br(),
+    p("After exploratory analysis of all three data files, it was determined that data files 2 and 3 were too incomplete and insufficient sources
+      in the larger context of national forest fires. Therefore, visualizations in this interactive report are created using the compiled dataset."),
     # add key findings to intro page -> Chantalle
+    h3("Key Findings:")
   )
 )
 # Page 2 -------------------------------------------------
 # Fires Over Time - investigating fire frequency
 
 # define following 
+fire_freq_per_yr <- read_csv('../../data/US_Fire_Freq_Per_Year.csv')
 class <- unique(fire_freq_per_yr$fire_size_class)
-class <- append(class, "overall")
+
 
 # create the tab
 time_graph_panel <- tabPanel(
@@ -82,10 +86,10 @@ time_graph_panel <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       selectInput("size_class", label = strong("Select Overall or Fire Size Classification"), 
-                  choices = list("Overall" = class[8], "A: .00-0.25 Acres" = class[1], "B: .26-9.99 Acres" = class[2], "C: 10-99.99 Acres" = class[3], 
-                                 "D: 100-299.99 Acres" = class[6], "E: 300-999.99 Acres" = class[5], 
-                                 "F: 1000-4999.99 Acres" = class[4],"G: >5000 Acres" = class[7]),
-                  selected = class[8]),
+                  choices = list("Overall" = class[1], "A: .00-0.25 Acres" = class[2], "B: .26-9.99 Acres" = class[3], "C: 10-99.99 Acres" = class[4], 
+                                 "D: 100-299.99 Acres" = class[5], "E: 300-999.99 Acres" = class[6], 
+                                 "F: 1000-4999.99 Acres" = class[7],"G: >5000 Acres" = class[8]),
+                  selected = class[1]),
       
       sliderInput(inputId = "year", label = "Year Range", min = 1992, max = 2015, step = 1,
                   value = c(1992, 2015), sep = "")
