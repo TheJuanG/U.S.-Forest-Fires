@@ -1,8 +1,8 @@
 library(tidyverse)
 library(plotly)
 library(ggplot2)
-fire_freq_per_yr <- read_csv("https://media.githubusercontent.com/media/info201a-au2022/project-group-2-section-af/main/data/US_Fire_Freq_Per_Year.csv")
 
+fire_freq_per_yr <- read_csv('../../data/US_Fire_Freq_Per_Year.csv')
 server <- function(input, output) {
   # show image on intro page
   output$forestfires <- renderImage({
