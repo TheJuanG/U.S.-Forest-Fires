@@ -16,3 +16,12 @@ num_fires_by_class_per_year <- compiled %>% select(fire_year, fire_size_class) %
 fire_freq_per_yr <- bind_rows(tot_fires_per_yr, num_fires_by_class_per_year)
 write.csv(fire_freq_per_yr,"~/Documents/info201/assignments/project-group-2-section-af/data/US_Fire_Freq_Per_Year.csv", row.names = FALSE)
 
+
+# create df that has year with state and number of fires for that year in that state.
+
+map_state_fires <- compiled %>% select(state, fire_year) %>%
+  group_by(state, fire_year) %>%
+  mutate(total_fires = sum(state == state)) %>%
+  distinct()
+
+write.csv(map_state_fires,"~/Documents/info201/assignments/project-group-2-section-af/data/US_State_Fire_Year.csv", row.names = FALSE)
