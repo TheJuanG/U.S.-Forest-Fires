@@ -25,3 +25,15 @@ map_state_fires <- compiled %>% select(state, fire_year) %>%
   distinct()
 
 write.csv(map_state_fires,"~/Documents/info201/assignments/project-group-2-section-af/data/US_State_Fire_Year.csv", row.names = FALSE)
+
+
+# create df that has statistical causes and number of fires caused
+
+common_causes <- compiled %>% 
+  select(stat_cause_descr) %>%
+  count(stat_cause_descr)
+
+common_causes <- rename(common_causes, num_fires_caused = n,
+                        statistical_cause = stat_cause_descr)
+
+write.csv(common_causes, "~/Documents/info201/assignments/project-group-2-section-af/data/US_Common_Fire_Causes.csv", row.names = FALSE)
