@@ -1,8 +1,13 @@
 library(tidyverse)
 library(plotly)
 library(ggplot2)
+library(usmap)
+library(scales)
 
 fire_freq_per_yr <- read_csv('../../data/US_Fire_Freq_Per_Year.csv')
+
+fire_state_year <- read_csv('../../data/US_State_Fire_Year.csv')
+
 server <- function(input, output) {
   # show image on intro page
   output$forestfires <- renderImage({
@@ -27,4 +32,26 @@ server <- function(input, output) {
     p_plotly <- ggplotly(p, tooltip = "text")
     return(p_plotly)
   })
+  
+  # Show map of fires per state in given year
+  output$map <- renderPlotly({
+    chosen <- fire_state_year %>% filter(fire_year == input$fire_year)
+    p <- plot_usmap(data = chosen, values = "total_fires") +
+      scale_fill_continuous(
+        low = "white",
+        high = "red",
+        name = "Total Fires"
+      ) +
+      labs(title = "United States", subtitle = "Number of Fires") +
+      theme(legend.position = "right")
+    p_plotly <- ggplotly(p, tooltip = "text")
+   return(p)
+  })
+  
+ # output$map <- renderPlotly({
+ #   chosen <- fire_state_year %>% filter(fire)
+ # })
 }
+
+?ggplotly
+?renderPlotly

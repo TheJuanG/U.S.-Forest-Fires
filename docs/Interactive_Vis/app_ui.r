@@ -109,10 +109,63 @@ time_graph_panel <- tabPanel(
     the trends in the frequency of forest fires based on the fire size perimeter classification in comparison to the annual overall total.")
 )
 
+
+# Page 3 -------------------------------------------------
+# Map of Fires - investigating fire frequency per state
+
+# define following 
+fire_state_year <- read_csv('../../data/US_State_Fire_Year.csv')
+
+years_state <- unique(fire_state_year$fire_year)
+years_state <- sort(years_state, decreasing = FALSE)
+    
+
+# create the tab
+map_graph_panel <- tabPanel(
+  "Fires Over Time",
+  h2("Evolution of Forest Fires"),
+  
+  # slider bar layout content
+  sidebarLayout(
+    sidebarPanel(
+      
+      
+      selectInput(inputId = "fire_year", label = "Year Choice", choices =
+                    list("1992" = years_state[1], "1993" = years_state[2], "1994" = years_state[3],
+                         "1995" = years_state[4], "1996" = years_state[5], "1997" = years_state[6], "1998" = years_state[7],
+                  "1999" = years_state[8], "2000" = years_state[9], "2001" = years_state[10], "2002" = years_state[11],
+                  "2003" = years_state[12], "2004" = years_state[13], "2005" = years_state[14], "2006" = years_state[15],
+                  "2007" = years_state[16], "2008" = years_state[17], "2009" = years_state[18], "2010" = years_state[19],
+                  "2011" = years_state[20], "2012" = years_state[21], "2013" = years_state[22], "2014" = years_state[23],
+                  "2015" = years_state[24]), selected = years_state[1])
+      
+    ),
+    # main panel layout content
+    mainPanel(
+      plotlyOutput(outputId = "map")
+    )
+  ),
+  # Description of Graph
+  h3(""),
+  p("")
+)
+years_state[1]
+
+?toJSON
+
+
+
+
+
+
+
+
+
 # Define UI
 ui <- navbarPage(
   theme = bs_theme(bootswatch = "solar"),
   "Final Project",      # application title 
   intro_panel,            # intro page
-  time_graph_panel, 
+  time_graph_panel,
+  map_graph_panel,
 )
