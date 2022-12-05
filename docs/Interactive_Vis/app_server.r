@@ -8,6 +8,8 @@ fire_freq_per_yr <- read_csv('../../data/US_Fire_Freq_Per_Year.csv')
 
 fire_state_year <- read_csv('../../data/US_State_Fire_Year.csv')
 
+fire_causes <- read_csv('../../data/US_Common_Fire_Causes.csv')
+
 server <- function(input, output) {
   # show image on intro page
   output$forestfires <- renderImage({
@@ -47,6 +49,19 @@ server <- function(input, output) {
     p_plotly <- ggplotly(p, tooltip = "text")
    return(p)
   })
+  
+  # Show pie chart of US fire causes
+  output$pie <- renderPlotly({
+    chosen <- fire_causes
+    p <- plot_ly(fire_causes, labels = ~statistical_cause, values = ~num_fires_caused, type = "pie", textinfo = "none")
+    p <- p %>% 
+      layout(title = 'U.S. Fire Causes',
+             xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+             yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+    return(p)
+  })
+  
+  p
   
  # output$map <- renderPlotly({
  #   chosen <- fire_state_year %>% filter(fire)

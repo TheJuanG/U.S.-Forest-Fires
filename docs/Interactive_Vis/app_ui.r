@@ -151,6 +151,28 @@ map_graph_panel <- tabPanel(
 )
 years_state[1]
 
+# Page 4 -------------------------------------------------
+# Pie Chart of Fire Causes - investigating most common fire causes
+
+# define following 
+fire_causes <- read_csv('../../data/US_Common_Fire_Causes.csv')
+
+# create the tab
+pie_graph_panel <- tabPanel(
+  "Fire Causes",
+  h2("U.S. Fire Causes"),
+  
+  # main panel layout content
+  # mainPanel(
+  #   plotlyOutput(outputId = "pie")
+  # ),
+  
+  # description of pie chart
+  h3(""),
+  p("")
+)
+
+
 ?toJSON
 
 
