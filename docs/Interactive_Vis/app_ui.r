@@ -152,22 +152,45 @@ map_graph_panel <- tabPanel(
 years_state[1]
 
 # Page 4 -------------------------------------------------
-# Pie Chart of Fire Causes - investigating most common fire causes
+# Bar Chart of Fire Causes - investigating most common fire causes
 
 # define following 
 fire_causes <- read_csv('../../data/US_Common_Fire_Causes.csv')
+cause <- unique(fire_causes$statistical_cause)
 
 # create the tab
-pie_graph_panel <- tabPanel(
+bar_graph_panel <- tabPanel(
   "Fire Causes",
   h2("U.S. Fire Causes"),
   
-  # main panel layout content
-  # mainPanel(
-  #   plotlyOutput(outputId = "pie")
-  # ),
+  # slider bar layout content
+  sidebarLayout(
+    sidebarPanel(
+      
+      
+      selectInput(inputId = "statistical_cause", label = "Cause", 
+                  choices = list("Missing/Undefined" = cause[1], "Arson" = 
+                                   cause[2], "Campfire" = cause[3], 
+                                 "Children" = cause[4],
+                                 "Debris Burning" = cause[5], 
+                                 "Equipment Use" = cause[6], 
+                                 "Fireworks" = cause[7],
+                                 "Lightning" = cause[8],
+                                 "Miscellaneous" = cause[9],
+                                 "Powerline" = cause[10],
+                                 "Railroad" = cause[11],
+                                 "Smoking" = cause[12],
+                                 "Structure" = cause[13]),
+                  selected = cause[1])
+      
+    ),
+    # main panel layout content
+    mainPanel(
+      plotlyOutput(outputId = "bar")
+    )
+  ),
   
-  # description of pie chart
+  # description of bar chart
   h3(""),
   p("")
 )

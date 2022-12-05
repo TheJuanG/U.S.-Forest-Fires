@@ -50,22 +50,17 @@ server <- function(input, output) {
    return(p)
   })
   
-  # Show pie chart of US fire causes
-  output$pie <- renderPlotly({
-    chosen <- fire_causes
-    p <- plot_ly(fire_causes, labels = ~statistical_cause, values = ~num_fires_caused, type = "pie", textinfo = "none")
-    p <- p %>% 
-      layout(title = 'U.S. Fire Causes',
-             xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
-             yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
-    return(p)
+  # Show bar chart of US fire causes
+  output$bar <- renderPlotly({
+    chosen <- fire_causes %>% filter(statistical_cause == input$statistical_cause)
+  barchart <- ggplot(chosen) +
+    geom_col(mapping = aes(x = statistical_cause, y = num_fires_caused)) +
+    labs(x = "Causes", y = "Number of Fires Caused", title = "The Causes of Forest Fires") +
+    scale_y_continuous(labels = scales::comma) +
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
+  bar_plotly <- ggplotly(barchart, tooltip = "text")
+  return(bar_plotly)
   })
-  
-  p
-  
- # output$map <- renderPlotly({
- #   chosen <- fire_state_year %>% filter(fire)
- # })
 }
 
 ?ggplotly
