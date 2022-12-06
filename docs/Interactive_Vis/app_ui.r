@@ -140,6 +140,7 @@ map_graph_panel <- tabPanel(
                   "2015" = years_state[24]), selected = years_state[1])
       
     ),
+    
     # main panel layout content
     mainPanel(
       plotlyOutput(outputId = "map")
@@ -156,6 +157,7 @@ years_state[1]
 
 # define following 
 fire_causes <- read_csv('../../data/US_Fire_Causes.csv')
+
 year_select <- unique(fire_causes$fire_year)
 
 # create the tab
@@ -178,6 +180,7 @@ bar_graph_panel <- tabPanel(
                          "2011" = year_select[20], "2012" = year_select[21], "2013" = year_select[22], "2014" = year_select[23],
                          "2015" = year_select[24]), selected = year_select[1])
     ),
+
     # main panel layout content
     mainPanel(
       plotlyOutput(outputId = "bar")
