@@ -44,7 +44,7 @@ intro_panel <- tabPanel(
       Additionally, choosing which interventions to enact represents another value tension. For example, prescribed burns are encouraged as a way to create more resilient forests, 
       however too many fires put residents and their families at risk."),
     h3("Research Questions:"),
-    strong("1. What is trend in frequency of forest fires?"), 
+    strong("1. What is the trend in frequency of forest fires?"), 
     p("This question investigates the number of forest fires per year nationally over the past few decades. This is important in 
       order to determine if more resources are needed to effectively fight fires."),
     br(),
@@ -53,7 +53,7 @@ intro_panel <- tabPanel(
       forest fire exposure, which can lead to better allocation of wildfire agency resources and better prepare residents of those areas."),
     br(),
     strong("3. What is the most frequent cause of forest fires?"),
-    p("Forest fires have a variety of different causes as determined by the USFDS. It is important to know what is the most common cause of these incidents in order 
+    p("Forest fires have a variety of different causes as determined by the USFS. It is important to know what is the most common cause of these incidents in order 
       to better educate people about how their individual actions can also impact forest fires."),
     h3("Datasets:"), 
     p("The dataset analyzed is the US Forest Service Fires hosted on Redvis, which is a data platform for academic research. This dataset was curated 
@@ -68,7 +68,16 @@ intro_panel <- tabPanel(
     p("After exploratory analysis of all three data files, it was determined that data files 2 and 3 were too incomplete and insufficient sources
       in the larger context of national forest fires. Therefore, visualizations in this interactive report are created using the compiled dataset."),
     # add key findings to intro page -> Chantalle
-    h3("Key Findings:")
+    h3("Key Findings:"),
+    strong("From visualization #1:"),
+    p("The highest annual number of forest fires were between
+           0.26 and 9.99 acres. From 1992 to 2015, the counts for this size range were approximately 
+           30,000 fires and above."),
+    strong("From visualization #2:"),
+    p("The map shows that the states California, Georgia, and Texas had the highest number
+      of forest fires for most years."),
+    strong("From visualization #3:"),
+    p("Debris Burning is the leading cause of forest fires.")
   )
 )
 # Page 2 -------------------------------------------------
