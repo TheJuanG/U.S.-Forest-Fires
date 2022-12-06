@@ -39,6 +39,7 @@ intro_panel <- tabPanel(
     strong("Human Values:"),
     br(),
     em("1. Environmental Sustainability:"),
+    br(),
     em("2. Safety:"),
     p("The interventions designed to fight and prevent forest fires must balance the impact on the environment as well as prioritizing the safety of people and their communities.
       Additionally, choosing which interventions to enact represents another value tension. For example, prescribed burns are encouraged as a way to create more resilient forests, 
@@ -319,8 +320,81 @@ report_page_panel <- tabPanel(
     prevention strategies. Wildfire agencies will also be able to prepare for 
     the effects of the disaster and even advise citizens about the fires and 
     steps to take."),
-  
-  
+  h3("The Dataset:"),
+  p("The dataset on Redivis (derived from the U.S. Forest Service) provides 
+    information about U.S. forest fires from 1992 to 2022. It contains data 
+    such as fire location, size, cause, etc. Since the concern is climate change,
+    this source will help in the preparation for future fires and their prevention. 
+    With this dataset, readers are able to be informed and even use it to create 
+    new resources (such as apps) to spread awareness about the world's current 
+    state."),
+  strong("[INSERT TABLE]"),
+  p(""),
+  p("The data is distributed by the U.S. Forest Services (USFS), and the main 
+    contributor is Ian Mathews (data curator). The datasets were last updated 
+    on October 6, 2022 and dates back from as early as 1992. USFS, an agency 
+    under the U.S. Department of Agriculture, encourages citizens to use their
+    data to create maps, apps, and other information products. Those who utilize
+    this resource are able to make money with their creations. The dataset was 
+    obtained from Redivis, a site that allows different organizations to upload 
+    and manage datasets."),
+  p("Creator: Redivis Demo Organization"),
+  p("Contributors: Ian Mathews (Data curator)"),
+  p("Related identifiers: https://data-usfs.hub.arcgis.com/"),
+  p("Citation: Redivis Demo Organization (2022). US Forest Service Fires (v1.1). 
+    Redivis. (Dataset) https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1"),
+  h3("Findings:"),
+  strong("1. What is trend in frequency of forest fires?"),
+  p("From the overall graph, we can see that the greatest annual number of fires 
+    in our dataset occurred in 2006 over the time period from 1992 to 2015. 
+    Additionally, over this time period, most of the fires that occurred were 
+    of size classification B: .26-9.99 Acres, ranging from a minimum of 29,624 
+    in 2013 to a peak of 59,411 in 2006. The trend in total forest fires in the
+    United States is that the annual number of fires increased from 67,975 fires
+    in 1992 to max of 114,004 fires  in 2005, and decreased to 74,491 fires in 
+    2015. The trend in G classification fires (>5000 acres) large fires  is that 
+    the annual number of fires was 58 in 1992 and then began to experience a 
+    series of sharp increases and sharp declines at the same rate. Throughout 
+    this period, the peaks of the cycles increased and the peak of the last cycle
+    is almost double the peak of the first cycle. The trends in size classification
+    B fires over this period closely mirrors the overall trend and range of values
+    as the total fires graph."),
+  h3("Discussion:"),
+  p("The trends in frequency of forest fires over the time period of 1992-2015 
+    are characterized by a series of sharp increases mirrored by sharp declines.
+    This indicates the natural cyclic behavior of wildfires. The aftermath of a 
+    forest fire leaves little debris leftover, so the likelihood of another fire
+    starting immediately after is low. This is seen in this visualization 
+    following a year or two with a huge increase in annual forest fires, the 
+    next year or two experience a decline. Comparing the scales of each fire 
+    size classification tells us that the majority of forest fires over this 
+    time period are small fires, and although larger fires occur on a much
+    smaller scale, the annual number of large fires has increased since 1992 
+    as of 2015. This indicates that smaller fires may actually be a greater 
+    threat in the United States."),
+  h3("Conclusion:"),
+  h3("Acknowledgements:"),
+  h3("References:"),
+  strong("Research References:"),
+  p("Popovich, Nadja, and Brad Plumer. 'As Wildfires Grow, Millions of Homes 
+  Are Being Built in Harm's Way.' The New York Times, The New York Times, 9 Sept. 
+  2022, https://www.nytimes.com/interactive/2022/09/09/climate/growing-wildfire-risk-homes.html."),
+  p("Redivis Demo Organization (2022). US Forest Service Fires (v1.1). Redivis. 
+    (Dataset) https://redivis.com/datasets/5k9t-07xsg7ckc?v=1.1"),
+  p("'Wildfire Causes and Evaluations (U.S. National Park Service).' National 
+    Parks Service, U.S. Department of the Interior, https://www.nps.gov/articles/wildfire-causes-and-evaluation.htm."),
+  p("'Wildfire Climate Connection.' National Oceanic and Atmospheric Administration, 
+    https://www.noaa.gov/noaa-wildfire/wildfire-climate-connection#:~:text=Research%20shows%20that%20changes%20in,fuels%20during%20the%20fire%20season."),
+  p("Zhong, Raymond. 'Climate Scientists Warn of a 'Global Wildfire Crisis'.' 
+    The New York Times, The New York Times, 23 Feb. 2022, https://www.nytimes.com/2022/02/23/climate/climate-change-un-wildfire-report.html."),
+  strong("Image References:"),
+  p("Mcnew, David. 'The Windy Fire Burning in the Long Meadow Grove in Sequoia
+    National Forest in California Earlier This Year.' The New York Times, 2021, 
+    https://www.nytimes.com/2021/11/17/climate/climate-change-wildfire-risk.html."),
+  strong("Code References:"),
+  p("'Scatter Plots on Maps in R.' Plotly| Graphing Libraries, 
+    https://plotly.com/r/scatter-plots-on-maps/."),
+  h3("Appendix A:"),
 )
 
 ?toJSON
