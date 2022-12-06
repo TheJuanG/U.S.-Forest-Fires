@@ -51,16 +51,31 @@ server <- function(input, output) {
   })
   
   # Show bar chart of US fire causes
+  # output$bar <- renderPlotly({
+  #   chosen <- fire_causes %>% filter(fire_year == input$fire_year)
+  # barchart <- ggplot(chosen) +
+  #   geom_col(mapping = aes(x = statistical_cause, y = num_fires_caused)) +
+  #   labs(x = "Causes", y = "Number of Fires Caused", title = "The Causes of Forest Fires") +
+  #   scale_y_continuous(labels = scales::comma) +
+  #   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
+  # bar_plotly <- ggplotly(barchart, tooltip = "text")
+  # return(bar_plotly)
+  # })
+  
   output$bar <- renderPlotly({
-    chosen <- fire_causes %>% filter(fire_year == input$fire_year)
-  barchart <- ggplot(chosen) +
-    geom_col(mapping = aes(x = statistical_cause, y = num_fires_caused)) +
-    labs(x = "Causes", y = "Number of Fires Caused", title = "The Causes of Forest Fires") +
-    scale_y_continuous(labels = scales::comma) +
-    theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
-  bar_plotly <- ggplotly(barchart, tooltip = "text")
-  return(bar_plotly)
+    chosen <- fire_causes %>% filter(fire_year == input$fire_year) %>% 
+      arrange(statistical_cause)
+    fig <- plot_ly(chosen, labels = ~statistical_cause, values = ~num_fires_caused, type = "pie", textinfo = "none",
+                   marker = list(colors = c('#d74c22', '#ed6010', '#fa7e00', '#f89a33', '#f9986a',
+                                            '#fdc18d', '#fdd8bc', '#b02220', '#d31848', '#f3444f',
+                                            '#f25371', '#f16d8b', '#f372a2')))
+    fig <- fig %>% 
+      layout(title = 'Number of Fires Occurred per Cause',
+             xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+             yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+    return(fig)
   })
+  fig
 }
 
 ?ggplotly

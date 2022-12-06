@@ -170,7 +170,7 @@ bar_graph_panel <- tabPanel(
     sidebarPanel(
       
       
-      selectInput(inputId = "statistical_cause", label = "Year Choice", 
+      selectInput(inputId = "fire_year", label = "Year Choice", 
                   choices =
                     list("1992" = year_select[1], "1993" = year_select[2], "1994" = year_select[3],
                          "1995" = year_select[4], "1996" = year_select[5], "1997" = year_select[6], "1998" = year_select[7],
@@ -187,19 +187,24 @@ bar_graph_panel <- tabPanel(
     )
   ),
   # description of bar chart
-  h3(""),
-  p("")
+  h3("What are the main causes of forest fires in the United States?"),
+  p("The pie chart above allows you to determine the number of fires caused by 
+    each factor per year, which can be filtered by using the drop-down menu. The 
+    data was collected from the U.S. Forest Service (USFS), and from this chart 
+    we can learn the most common causes of fires to be able to take necessary 
+    precautions and prevent future ignitions.")
 )
 
+# Page 5 -------------------------------------------------
+# Summary Takeaways
+
+# create tab
+takeaway_page_panel <- tabPanel(
+  "Summary",
+  h2("Summary Takeaways")
+)
 
 ?toJSON
-
-
-
-
-
-
-
 
 
 # Define UI
@@ -209,5 +214,6 @@ ui <- navbarPage(
   intro_panel,            # intro page
   time_graph_panel,
   map_graph_panel,
-  bar_graph_panel
+  bar_graph_panel,
+  takeaway_page_panel
 )
