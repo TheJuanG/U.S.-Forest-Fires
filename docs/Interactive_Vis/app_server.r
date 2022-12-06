@@ -8,7 +8,7 @@ fire_freq_per_yr <- read_csv('../../data/US_Fire_Freq_Per_Year.csv')
 
 fire_state_year <- read_csv('../../data/US_State_Fire_Year.csv')
 
-fire_causes <- read_csv('../../data/US_Common_Fire_Causes.csv')
+fire_causes <- read_csv('../../data/US_Fire_Causes.csv')
 
 server <- function(input, output) {
   # show image on intro page
@@ -52,7 +52,7 @@ server <- function(input, output) {
   
   # Show bar chart of US fire causes
   output$bar <- renderPlotly({
-    chosen <- fire_causes %>% filter(statistical_cause == input$statistical_cause)
+    chosen <- fire_causes %>% filter(fire_year == input$fire_year)
   barchart <- ggplot(chosen) +
     geom_col(mapping = aes(x = statistical_cause, y = num_fires_caused)) +
     labs(x = "Causes", y = "Number of Fires Caused", title = "The Causes of Forest Fires") +

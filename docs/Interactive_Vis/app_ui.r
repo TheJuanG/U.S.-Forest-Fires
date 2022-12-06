@@ -155,8 +155,8 @@ years_state[1]
 # Bar Chart of Fire Causes - investigating most common fire causes
 
 # define following 
-fire_causes <- read_csv('../../data/US_Common_Fire_Causes.csv')
-cause <- unique(fire_causes$statistical_cause)
+fire_causes <- read_csv('../../data/US_Fire_Causes.csv')
+year_select <- unique(fire_causes$fire_year)
 
 # create the tab
 bar_graph_panel <- tabPanel(
@@ -168,28 +168,21 @@ bar_graph_panel <- tabPanel(
     sidebarPanel(
       
       
-      selectInput(inputId = "statistical_cause", label = "Cause", 
-                  choices = list("Missing/Undefined" = cause[1], "Arson" = 
-                                   cause[2], "Campfire" = cause[3], 
-                                 "Children" = cause[4],
-                                 "Debris Burning" = cause[5], 
-                                 "Equipment Use" = cause[6], 
-                                 "Fireworks" = cause[7],
-                                 "Lightning" = cause[8],
-                                 "Miscellaneous" = cause[9],
-                                 "Powerline" = cause[10],
-                                 "Railroad" = cause[11],
-                                 "Smoking" = cause[12],
-                                 "Structure" = cause[13]),
-                  selected = cause[1])
-      
+      selectInput(inputId = "statistical_cause", label = "Year Choice", 
+                  choices =
+                    list("1992" = year_select[1], "1993" = year_select[2], "1994" = year_select[3],
+                         "1995" = year_select[4], "1996" = year_select[5], "1997" = year_select[6], "1998" = year_select[7],
+                         "1999" = year_select[8], "2000" = year_select[9], "2001" = year_select[10], "2002" = year_select[11],
+                         "2003" = year_select[12], "2004" = year_select[13], "2005" = year_select[14], "2006" = year_select[15],
+                         "2007" = year_select[16], "2008" = year_select[17], "2009" = year_select[18], "2010" = year_select[19],
+                         "2011" = year_select[20], "2012" = year_select[21], "2013" = year_select[22], "2014" = year_select[23],
+                         "2015" = year_select[24]), selected = year_select[1])
     ),
     # main panel layout content
     mainPanel(
       plotlyOutput(outputId = "bar")
     )
   ),
-  
   # description of bar chart
   h3(""),
   p("")
@@ -213,4 +206,5 @@ ui <- navbarPage(
   intro_panel,            # intro page
   time_graph_panel,
   map_graph_panel,
+  bar_graph_panel
 )
