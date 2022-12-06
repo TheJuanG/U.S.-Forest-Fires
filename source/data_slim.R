@@ -30,10 +30,11 @@ write.csv(map_state_fires,"~/Documents/info201/assignments/project-group-2-secti
 # create df that has statistical causes and number of fires caused
 
 common_causes <- compiled %>% 
-  select(stat_cause_descr) %>%
+  select(fire_year, stat_cause_descr) %>%
+  group_by(fire_year) %>% 
   count(stat_cause_descr)
 
 common_causes <- rename(common_causes, num_fires_caused = n,
                         statistical_cause = stat_cause_descr)
 
-write.csv(common_causes, "~/Documents/info201/assignments/project-group-2-section-af/data/US_Common_Fire_Causes.csv", row.names = FALSE)
+write.csv(common_causes, "~/Documents/info201/assignments/project-group-2-section-af/data/US_Fire_Causes.csv", row.names = FALSE)
