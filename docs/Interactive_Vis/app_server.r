@@ -6,7 +6,7 @@ library(scales)
 
 fire_freq_per_yr <- read_csv('../../data/US_Fire_Freq_Per_Year.csv')
 
-fire_state_year <- read_csv('../../data/US_State_Fire_Year.csv')
+fire_state_year <- read_csv('../../data/US_State_Fire_Year_New.csv')
 
 fire_causes <- read_csv('../../data/US_Fire_Causes.csv')
 
@@ -37,8 +37,9 @@ server <- function(input, output) {
   
   # Show map of fires per state in given year
   output$map <- renderPlotly({
-    chosen <- fire_state_year %>% filter(fire_year == input$fire_year)
-    p <- plot_usmap(data = chosen, values = "total_fires") +
+    chosen <- fire_state_year %>% filter(fire_year == input$fire_year) %>%
+      filter(stat_cause_descr == input$stat_cause_descr)
+    p <- plot_usmap(data = chosen, values = "total_fires", labels = TRUE) +
       scale_fill_continuous(
         low = "white",
         high = "red",

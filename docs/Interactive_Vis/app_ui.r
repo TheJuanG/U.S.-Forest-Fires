@@ -124,10 +124,12 @@ time_graph_panel <- tabPanel(
 # Map of Fires - investigating fire frequency per state
 
 # define following 
-fire_state_year <- read_csv('../../data/US_State_Fire_Year.csv')
+fire_state_year <- read_csv('../../data/US_State_Fire_Year_New.csv')
 
 years_state <- unique(fire_state_year$fire_year)
 years_state <- sort(years_state, decreasing = FALSE)
+
+years_cause <- unique(fire_state_year$stat_cause_descr)
     
 
 # create the tab
@@ -147,8 +149,16 @@ map_graph_panel <- tabPanel(
                   "2003" = years_state[12], "2004" = years_state[13], "2005" = years_state[14], "2006" = years_state[15],
                   "2007" = years_state[16], "2008" = years_state[17], "2009" = years_state[18], "2010" = years_state[19],
                   "2011" = years_state[20], "2012" = years_state[21], "2013" = years_state[22], "2014" = years_state[23],
-                  "2015" = years_state[24]), selected = years_state[1])
+                  "2015" = years_state[24]), selected = years_state[1]),
       
+    
+    
+    selectInput(inputId = "stat_cause_descr", label = "Cause Choice", choices =
+                  list("All" = years_cause[1], "Arson" = years_cause[2], "Smoking" = years_cause[3], "Campfire" = years_cause[4],
+                       "Children" = years_cause[5], "Railroad" = years_cause[6], "Fireworks" = years_cause[7],
+                       "Lightning" = years_cause[8], "Powerline" = years_cause[9], "Structure" = years_cause[10],
+                       "Equipment Use" = years_cause[11], "Miscellaneous" = years_cause[12], "Debris Burning" = years_cause[13],
+                       "Missing/Undefined" = years_cause[14]), selected = years_cause[1]),
     ),
     
     # main panel layout content
