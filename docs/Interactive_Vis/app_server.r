@@ -76,7 +76,6 @@ server <- function(input, output) {
              yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
     return(fig)
   })
-  fig
 }
 
 ?ggplotly
