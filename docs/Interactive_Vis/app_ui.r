@@ -70,7 +70,7 @@ intro_panel <- tabPanel(
     # add key findings to intro page -> Chantalle
     h3("Key Findings:"),
     strong("From visualization #1:"),
-    p("The highest annual number of forest fires were between
+    p("The highest annual number of forest fires was between
            0.26 and 9.99 acres. From 1992 to 2015, the counts for this size range were approximately 
            30,000 fires and above."),
     strong("From visualization #2:"),
@@ -131,7 +131,7 @@ years_state <- sort(years_state, decreasing = FALSE)
 
 # create the tab
 map_graph_panel <- tabPanel(
-  "Fires Over Time",
+  "Fires Per State",
   h2("Evolution of Forest Fires"),
   
   # slider bar layout content
@@ -213,6 +213,116 @@ takeaway_page_panel <- tabPanel(
   h2("Summary Takeaways")
 )
 
+# Page 6 -------------------------------------------------
+# Report
+
+# create tab
+report_page_panel <- tabPanel(
+  "Report",
+  h2("Summary Report"),
+  br(),
+  h3("U.S. Forest Fires"),
+  p(""),
+  strong("Code Name:"), 
+  p("USFS"),
+  strong("Authors:"), 
+  p("Juan Carlos (juancg@uw.edu), Chantalle Matro (cmatro@uw.edu), Militha Madur (militham@uw.edu)"),
+  strong("Affiliation:"),
+  p("INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"),
+  strong("Date:"), 
+  p("Autumn 2022"),
+  h3("Abstract:"),
+  p("Our main concern is the role of forest fires in climate change. This is 
+    important because not only are there environmental consequences, but 
+    socioeconomic effects as well. To address this concern, we plan to examine a
+    dataset provided by the U.S. Forest Service that contains information about
+    past and recent U.S. forest fires."),
+  h3("Keywords:"),
+  p("forest fires, climate change, global warming, housing crisis"),
+  h3("Introduction:"),
+  p("Climate change has caused many devastating environmental changes. One of 
+    the most significant is the severe intensity and frequency of wildfires. 
+    The timing of the fire season has evolved to reach a higher peak much 
+    earlier and last much longer. While the record breaking temperatures and 
+    dryness from human-caused climate change have increased the ability of fires
+    to start and remain sustained, climate change is not the only cause of forest
+    fires. Forest fires are caused by a variety of different factors including 
+    lightning, unattended campfires, equipment use and malfunctions, and discarded 
+    cigarettes. Based on  2000-2017 data almost 85% of wildland fires were caused 
+    by humans in the United States (US National Park Services 2022). We aim to 
+    identify most common causes of forest fires, highest at risk regions for fires,
+    and the impact of forest fires on the environment in order to better inform
+    policy and fire prevention/management efforts."),
+  h3("Problem Domain:"),
+  strong("Background:"),
+  p(""),
+  strong("Environmental Context:"),
+  p("Human-caused global warming and climate change has resulted in record high
+    temperatures and dryness that has resulted in devastating fires. In regions
+    with histories of forest fires, the intensity and acreage of fires has vastly
+    increased. Decreased rainfall and humidity have also increased the flammability 
+    of vegetation, increasing the abundance of forest fire fuel, frequency of fires,
+    and span of fires."),
+  strong("Socioeconomic Context:"),
+  p("Most wildfire damage occurs in transitional areas that border businesses 
+    and homes and undeveloped areas. However, crowding and housing crises have 
+    resulted in states restricting development in densely populated cities. More
+    people are moving further away from city centers to where housing costs are
+    lower. Both of these factors have resulted in an expansion in development on 
+    the wildland-urban interface (WUI), which is a region near and part of 
+    flammable vegetation (Popovich, Plumber, NY Times 2022)."),
+  strong("Stakeholders:"),
+  p("General Public: Forest fires can threaten their homes and communities. 
+    Active fires can cause severe health risks due to smoke inhalation and 
+    reduced air quality."),
+  p("Wildfire Agencies: Wildfire agencies and fire departments develop and carry
+  out interventions to curb and eliminate fires. Their aims are to ensure the 
+  safety of firefighters, reduce or eliminate the fire such that it doesn’t harm 
+  residents, and the most environmental benefit from the fire is received."),
+  p("Meteorological/climate Agencies: Wildfires cause changes in air quality, 
+  temperature, dryness, rainfall, and other measures of climate and weather. 
+  Wildfires can cause long-term changes in the temperament of a region."),
+  strong("Human Values:"),
+  p("The interventions designed to fight and prevent forest fires must balance 
+    the impact on the environment as well as prioritizing the safety of people 
+    and their communities. Therefore, the  human values of environmental 
+    sustainability and safety are the driving forces behind the issue of forest
+    fires. Additionally, choosing which interventions to enact represents another 
+    value tension. For example, prescribed burns are encouraged as a way to
+    create more resilient forests, however too many fires put residents and their
+    families at risk."),
+  strong("Potential Benefits and Harms:"),
+  p("Potential benefits of data/technology intervention  include implementing 
+    more effective interventions that eliminate fires faster while reducing the
+    risk for firefighters and wildfire agencies and predicting fire intensity, 
+    location, and timing allowing wildfire agencies to better prepare resources
+    and advise residents. This will help eliminate threats before they reach 
+    communities and threaten the environment further. The potential harm of this
+    solution is that it could contribute to creating an algorithm that 
+    prioritizes certain fire prone regions over others. An unanticipated consequence
+    is that the criteria that the algorithm uses could have biases that result 
+    in inequities."),
+  h3("Research Questions:"),
+  strong("1. What is the trend in frequency of forest fires?"),
+  p("Seeing the number of forest fires per year, whether it’s increasing or 
+    decreasing, will help determine if there must be more resources available to 
+    effectively fight fires. Also, it can aid in learning how these resources 
+    and methods can be further improved."),
+  br(),
+  strong("2. Which locations do forest fires most frequently occur?"),
+  p("Recognizing the locations in which forest fires happen the most allows for 
+    more attention to these vulnerable areas. This aids in prevention by being
+    more aware of fire hazards and better preparation of fire engines."),
+  br(),
+  strong("3. What is the most frequent cause of forest fires?"),
+  p("Knowing the source of these forest fires is vital in the implementation of 
+    prevention strategies. Wildfire agencies will also be able to prepare for 
+    the effects of the disaster and even advise citizens about the fires and 
+    steps to take."),
+  
+  
+)
+
 ?toJSON
 
 
@@ -224,5 +334,6 @@ ui <- navbarPage(
   time_graph_panel,
   map_graph_panel,
   bar_graph_panel,
-  takeaway_page_panel
+  takeaway_page_panel,
+  report_page_panel
 )
