@@ -190,7 +190,7 @@ bar_graph_panel <- tabPanel(
     sidebarPanel(
       
       
-      selectInput(inputId = "fire_year", label = "Year Choice", 
+      selectInput(inputId = "yr", label = "Year Choice", 
                   choices =
                     list("1992" = year_select[1], "1993" = year_select[2], "1994" = year_select[3],
                          "1995" = year_select[4], "1996" = year_select[5], "1997" = year_select[6], "1998" = year_select[7],

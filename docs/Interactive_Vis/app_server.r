@@ -64,7 +64,7 @@ server <- function(input, output) {
   # })
   
   output$bar <- renderPlotly({
-    chosen <- fire_causes %>% filter(fire_year == input$fire_year) %>% 
+    chosen <- fire_causes %>% filter(fire_year == input$yr) %>% 
       arrange(statistical_cause)
     fig <- plot_ly(chosen, labels = ~statistical_cause, values = ~num_fires_caused, type = "pie", textinfo = "none",
                    marker = list(colors = c('#d74c22', '#ed6010', '#fa7e00', '#f89a33', '#f9986a',
