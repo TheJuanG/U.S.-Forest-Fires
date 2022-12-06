@@ -135,7 +135,7 @@ years_cause <- unique(fire_state_year$stat_cause_descr)
 # create the tab
 map_graph_panel <- tabPanel(
   "Fires Per State",
-  h2("Evolution of Forest Fires"),
+  h2("Map of Forest Fires"),
   
   # slider bar layout content
   sidebarLayout(
@@ -167,8 +167,9 @@ map_graph_panel <- tabPanel(
     )
   ),
   # Description of Graph
-  h3(""),
-  p("")
+  h3("Which locations do forest fires most occur?"),
+  p("The map allows you to view the total number of fires that have occurred in each state when choosing the cause of the fire and the year you want to see.
+    Being able to change the year and cause of fires lets you see how different states or regions are impacted by a specific cause of fire for a given year compared to others.")
 )
 years_state[1]
 

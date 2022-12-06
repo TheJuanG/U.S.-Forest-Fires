@@ -39,7 +39,7 @@ server <- function(input, output) {
   output$map <- renderPlotly({
     chosen <- fire_state_year %>% filter(fire_year == input$fire_year) %>%
       filter(stat_cause_descr == input$stat_cause_descr)
-    p <- plot_usmap(data = chosen, values = "total_fires", labels = TRUE) +
+    p <- plot_usmap(data = chosen, values = "total_fires") +
       scale_fill_continuous(
         low = "white",
         high = "red",
