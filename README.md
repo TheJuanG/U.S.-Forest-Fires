@@ -12,4 +12,4 @@
 |[`/instructions`](./instructions)| This directory contains the project design brief.  |
 |[`/source`](./source) | All R source code will be located in this directory. 
 | .gitignore | This  file is important. It tells git to ignore all files that are listed therein. |
-| LICENSE | This is a straigtforward software license that basically says "You own the copyright of your code.  Others can use your code, so long as they cite that they are doing so." You should put your names into the LICENSE file. If you would like to use a different license, that would be fine! |
+| LICENSE | This is the software license for our code. |
