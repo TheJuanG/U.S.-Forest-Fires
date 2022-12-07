@@ -227,13 +227,24 @@ takeaway_page_panel <- tabPanel(
   strong("Forest Fire Counts"),
   tableOutput("sum1"),
   p("This table shows the highest, lowest, and most recent forest fire counts
-    for the 'Overall' fire size classification."),
+    for the 'Overall' fire size classification. This information is important in
+    determining if our country's response to forest fires is improving throughout 
+    the years. The graph shows that the count fluctuates, but at least we can see
+    that it has not reached a really high number since 2006."),
   h3("From visualization #2:"),
+  strong("States with Most Forest Fires (2015)"),
+  tableOutput("sum2"),
+  p("This table shows the three states that had the most number of forest fires 
+    that occurred through all causes in the year 2015. Texas and California had 
+    the highest count in 2015 and for most years, which means that these areas
+    need more attention."),
   h3("From visualization #3:"),
-  strong("Top Forest Fire Causes"),
+  strong("Top Forest Fire Causes (1992-2015)"),
   tableOutput("sum3"),
   p("This table shows the top three causes of forest fires in the U.S. and how
-    many years (from 1992-2015) they were the most frequent cause.")
+    many years (from 1992-2015) they were the most frequent cause. By knowing that
+    Debris Burning is the leading cause of forest fires, we can hopefully reduce
+    its occurrence in the future.")
 )
 
 # Page 6 -------------------------------------------------
