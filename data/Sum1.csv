@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7ad996277f1e16ac3384648e181bf41cf459af969ef5cb53fd42a11b5a99040f
-size 138
+Classification_Size,Year,Num_Annual_Fires,Type
+Overall,1997,61450,Lowest
+Overall,2006,114004,Highest
+Overall,2015,74491,Recent
