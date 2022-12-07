@@ -3,20 +3,24 @@ library(plotly)
 library(ggplot2)
 library(usmap)
 library(scales)
+library(shiny)
+library(dplyr)
+library(bslib)
+library(stringr)
 
-fire_freq_per_yr <- read_csv('../../data/US_Fire_Freq_Per_Year.csv')
+fire_freq_per_yr <- read_csv('US_Fire_Freq_Per_Year.csv')
 
-fire_state_year <- read_csv('../../data/US_State_Fire_Year_New.csv')
+fire_state_year <- read_csv('US_State_Fire_Year_New.csv')
 
-fire_causes <- read_csv('../../data/US_Fire_Causes.csv')
+fire_causes <- read_csv('US_Fire_Causes.csv')
 
-report_table <- read_csv('../../data/ReportTable.csv')
+report_table <- read_csv('ReportTable.csv')
 
-summary_1 <- read_csv('../../data/Sum1.csv')
+summary_1 <- read_csv('Sum1.csv')
 
-summary_2 <- read_csv('../../data/Sum2.csv')
+summary_2 <- read_csv('Sum2.csv')
 
-summary_3 <- read_csv('../../data/Sum3.csv')
+summary_3 <- read_csv('Sum3.csv')
 
 server <- function(input, output) {
   # show image on intro page

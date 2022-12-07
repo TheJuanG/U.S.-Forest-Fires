@@ -1,3 +1,25 @@
+library(tidyverse)
+library(plotly)
+library(ggplot2)
+library(usmap)
+library(scales)
+library(shiny)
+library(dplyr)
+library(bslib)
+library(stringr)
+fire_freq_per_yr <- read_csv('US_Fire_Freq_Per_Year.csv')
+
+fire_state_year <- read_csv('US_State_Fire_Year_New.csv')
+
+fire_causes <- read_csv('US_Fire_Causes.csv')
+
+report_table <- read_csv('ReportTable.csv')
+
+summary_1 <- read_csv('Sum1.csv')
+
+summary_2 <- read_csv('Sum2.csv')
+
+summary_3 <- read_csv('Sum3.csv')
 # This file contains all of the UI code used to build the multi-page shiny app
 # Page 1 -------------------------------------------------
 # create tab for intro page
@@ -85,7 +107,7 @@ intro_panel <- tabPanel(
 # Fires Over Time - investigating fire frequency
 
 # define following 
-fire_freq_per_yr <- read_csv('../../data/US_Fire_Freq_Per_Year.csv')
+fire_freq_per_yr <- read_csv('US_Fire_Freq_Per_Year.csv')
 class <- unique(fire_freq_per_yr$fire_size_class)
 
 
@@ -124,7 +146,7 @@ time_graph_panel <- tabPanel(
 # Map of Fires - investigating fire frequency per state
 
 # define following 
-fire_state_year <- read_csv('../../data/US_State_Fire_Year_New.csv')
+fire_state_year <- read_csv('US_State_Fire_Year_New.csv')
 
 years_state <- unique(fire_state_year$fire_year)
 years_state <- sort(years_state, decreasing = FALSE)
@@ -177,7 +199,7 @@ years_state[1]
 # Bar Chart of Fire Causes - investigating most common fire causes
 
 # define following 
-fire_causes <- read_csv('../../data/US_Fire_Causes.csv')
+fire_causes <- read_csv('US_Fire_Causes.csv')
 
 year_select <- unique(fire_causes$fire_year)
 
