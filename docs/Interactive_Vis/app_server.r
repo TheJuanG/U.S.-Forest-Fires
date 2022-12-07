@@ -12,6 +12,8 @@ fire_causes <- read_csv('../../data/US_Fire_Causes.csv')
 
 report_table <- read_csv('../../data/ReportTable.csv')
 
+summary_3 <- read_csv('../../data/Sum3.csv')
+
 server <- function(input, output) {
   # show image on intro page
   output$forestfires <- renderImage({
@@ -21,6 +23,7 @@ server <- function(input, output) {
   }, deleteFile = FALSE)
   
   output$table <- renderTable(report_table)
+  output$sum3 <- renderTable(summary_3)
   
   # show scatter plot on Fires Over Time Page
   output$scatter <- renderPlotly({
@@ -54,18 +57,6 @@ server <- function(input, output) {
     p_plotly <- ggplotly(p, tooltip = "text")
    return(p)
   })
-  
-  # Show bar chart of US fire causes
-  # output$bar <- renderPlotly({
-  #   chosen <- fire_causes %>% filter(fire_year == input$fire_year)
-  # barchart <- ggplot(chosen) +
-  #   geom_col(mapping = aes(x = statistical_cause, y = num_fires_caused)) +
-  #   labs(x = "Causes", y = "Number of Fires Caused", title = "The Causes of Forest Fires") +
-  #   scale_y_continuous(labels = scales::comma) +
-  #   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
-  # bar_plotly <- ggplotly(barchart, tooltip = "text")
-  # return(bar_plotly)
-  # })
   
   output$bar <- renderPlotly({
     chosen <- fire_causes %>% filter(fire_year == input$yr) %>% 

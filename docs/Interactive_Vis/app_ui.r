@@ -222,7 +222,14 @@ bar_graph_panel <- tabPanel(
 # create tab
 takeaway_page_panel <- tabPanel(
   "Summary",
-  h2("Summary Takeaways")
+  h2("Summary Takeaways"),
+  h3("From visualization #1:"),
+  h3("From visualization #2:"),
+  h3("From visualization #3:"),
+  strong("Top Fire Causes"),
+  tableOutput("sum3"),
+  p("This table shows the top three causes of forest fires in the U.S. and how
+    many years (from 1992-2015) they were the most frequent cause.")
 )
 
 # Page 6 -------------------------------------------------
