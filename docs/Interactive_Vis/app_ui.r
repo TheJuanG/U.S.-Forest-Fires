@@ -184,7 +184,7 @@ year_select <- unique(fire_causes$fire_year)
 # create the tab
 bar_graph_panel <- tabPanel(
   "Fire Causes",
-  h2("U.S. Fire Causes"),
+  h2("U.S. Forest Fire Causes"),
   
   # slider bar layout content
   sidebarLayout(
@@ -224,9 +224,13 @@ takeaway_page_panel <- tabPanel(
   "Summary",
   h2("Summary Takeaways"),
   h3("From visualization #1:"),
+  strong("Forest Fire Counts"),
+  tableOutput("sum1"),
+  p("This table shows the highest, lowest, and most recent forest fire counts
+    for the 'Overall' fire size classification."),
   h3("From visualization #2:"),
   h3("From visualization #3:"),
-  strong("Top Fire Causes"),
+  strong("Top Forest Fire Causes"),
   tableOutput("sum3"),
   p("This table shows the top three causes of forest fires in the U.S. and how
     many years (from 1992-2015) they were the most frequent cause.")

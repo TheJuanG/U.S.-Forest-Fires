@@ -12,6 +12,8 @@ fire_causes <- read_csv('../../data/US_Fire_Causes.csv')
 
 report_table <- read_csv('../../data/ReportTable.csv')
 
+summary_1 <- read_csv('../../data/Sum1.csv')
+
 summary_3 <- read_csv('../../data/Sum3.csv')
 
 server <- function(input, output) {
@@ -23,6 +25,7 @@ server <- function(input, output) {
   }, deleteFile = FALSE)
   
   output$table <- renderTable(report_table)
+  output$sum1 <- renderTable(summary_1)
   output$sum3 <- renderTable(summary_3)
   
   # show scatter plot on Fires Over Time Page
