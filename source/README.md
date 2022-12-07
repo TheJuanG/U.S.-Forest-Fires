@@ -1,18 +1,13 @@
 # The `/source` Directory
 
-All of our project code is found in this directory.  We further organize our code into 
-these sub-directories (TODO: Update/Delete)
+All of our project code is found in this directory. 
 
-|Source Directories | Brief Description|
+|Source Files | Brief Description|
 |---------------| -----------------|
-|[xxx](./xxx) | Description ... 
-|[xxx](./xxx) | Description ... 
+|[Chart 1](./Chart1.R) | This is the code that was used to create the map on the exploratory analysis report page 
+|[Chart 2](./Chart2.R) | This is the code that was used to create the causes barchart on the exploratory analysis report page
+|[Chart 3](./Chart3.R) | This is the code that was used to create the density of forest fires chart on the exploratory analysis report page
+|[summary info](./summary_info.R) | This is the code that was used to compute the summary info on the exploratory analysis report page
+|[table info](./table_info.R) | This is the code that was used to compute the table info on the exploratory analysis report page
+|[data_slim.R](./data_slim.R) | This is the code that was used to slim down the original data file and output as new csv's stored in the data folder
 
-
-# DEVELOPER NOTE 1: About ... 
-* All source code for your projects should go in the `/source` directory
-* To organize your code, you might decide to create sub-directories
-* If you use sub-directories, plese briefly describe them in the table above
-* Please remember your audience (prospective employers, open source colleagues, TAs, Instructors). Therefore, 
-aim for clarity and conciseness.
-* When done, be sure to delete this NOTE sections (which are intended for you, of course, not your audience!)
