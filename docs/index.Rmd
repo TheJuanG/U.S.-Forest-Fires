@@ -14,9 +14,9 @@ library(tidyverse)
 library(plotly)
 source("../source/summary_info.R")
 source("../source/table_info.R")
-source("../docs/Chart1.R")
-source("../docs/Chart2.R")
-source("../docs/Chart3.R")
+source("../source/Chart1.R")
+source("../source/Chart2.R")
+source("../source/Chart3.R")
 knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
 ```
 
