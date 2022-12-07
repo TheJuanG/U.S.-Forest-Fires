@@ -1,24 +1,21 @@
 # The `\data` Directory: Project Data Summary 
 
 In our project, we use the following data files and Application Programming Interfaces:
+Due to the nature of the original US Forest Service Fires data files from Redivis (see report) being over 500 mb each, we filtered down the datasets to the computed summary information/data files stored in this folder. The code used in this process is stored in the source folder in the file data_slim.r
 
 ## Data files (TODO: Update/delete for your PROJECT)
 |Data File Name | Brief Description|
 |---------------| -----------------|
-|[example.cvs](./example.csv) | This file contains temperature data. (See report for details.)
-|[another-file](./filename2.csv) | Description ... 
+|[US_Fire_Causes.csv](./US_Fire_Causes.csv) | This file contains Description
+|[US_Fire_Causes_State.csv](./US_Fire_Causes_State.csv) | Description ... 
+|[US_Fire_Freq_Per_Year.csv](./US_Fire_Freq_Per_Year.csv) | This file contains the 
+total number of fires per year for each classification calculated from US_Fires_Compiled.csv data file from Redivis.
+|[US_State_Fire_Year.csv](./US_State_Fire_Year.csv) | This file contains Description
+|[US_State_Fire_Year_New.csv](./US_State_Fire_Year_New.csv) | This file .. Description
 
-## Application Programming Interfaces (API) (TODO: Update/delete for your PROJECT)
 
-* **New York Times Books API**. The _New York Times_ provides data for Best
-Sellers lists and the books that have been reviewed in the New York Times. An overview of the API that we use in our project is available here: [Books API](https://developer.nytimes.com/docs/books-product/1/overview). For more about developing apps with New York Times data see: [NYTimes Developers](https://developer.nytimes.com/).
+## Application Programming Interfaces (API) 
+Redivis is a data platform for academic research. The US Forest Service Fires dataset was obtained from Redivis. We downloaded the original three datasets in csv format (see report). We computed filtered/summary information from the US Fires Compiled dataset that are stored in this data folder.
 
-# Developer notes: About the `/data` Directory (TODO: Read and delete this section)
 
-* Use the `/data` directory to store any data that you using in your project (for example, CSV files)
-* Edit this `README.md` file and summarize your data files
-* If you are using APIs to access data, summarize them, providing specific information
-* See examples above.
-* Please remember your audience (prospective employers, open source colleagues, TAs, Instructors). Therefore, 
-aim for clarity and conciseness.
-* When done, be sure to delete these NOTE sections and the example CSV file (which are intended for you, of course, not your audience!)
+
