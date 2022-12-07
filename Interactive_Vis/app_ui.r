@@ -79,7 +79,7 @@ intro_panel <- tabPanel(
     p("Forest fires have a variety of different causes as determined by the USFS. It is important to know what is the most common cause of these incidents in order 
       to better educate people about how their individual actions can also impact forest fires."),
     h3("Datasets:"), 
-    p("The dataset analyzed is the US Forest Service Fires hosted on Redvis, which is a data platform for academic research. This dataset was curated 
+    p("The dataset analyzed is the US Forest Service Fires hosted on Redivis, which is a data platform for academic research. This dataset was curated 
       by Ian Mathews and is derived from the U.S. Forest Service - Geospatial Data 
       Discovery. The dataset is comprised of the following three files."),
     strong("1. A compiled list of forest fires in the United States ranging from 1992-2015, with 1,880,465 total entries"),
