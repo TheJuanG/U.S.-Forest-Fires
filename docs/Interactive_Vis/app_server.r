@@ -10,6 +10,8 @@ fire_state_year <- read_csv('../../data/US_State_Fire_Year_New.csv')
 
 fire_causes <- read_csv('../../data/US_Fire_Causes.csv')
 
+report_table <- read_csv('../../data/ReportTable.csv')
+
 server <- function(input, output) {
   # show image on intro page
   output$forestfires <- renderImage({
@@ -17,6 +19,8 @@ server <- function(input, output) {
          width = "100%",
          height = "100%")
   }, deleteFile = FALSE)
+  
+  output$table <- renderTable(report_table)
   
   # show scatter plot on Fires Over Time Page
   output$scatter <- renderPlotly({

@@ -339,7 +339,7 @@ report_page_panel <- tabPanel(
     With this dataset, readers are able to be informed and even use it to create 
     new resources (such as apps) to spread awareness about the world's current 
     state."),
-  strong("[INSERT TABLE]"),
+  tableOutput("table"),
   p(""),
   p("The data is distributed by the U.S. Forest Services (USFS), and the main 
     contributor is Ian Mathews (data curator). The datasets were last updated 
