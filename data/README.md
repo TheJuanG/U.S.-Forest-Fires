@@ -8,8 +8,7 @@ Due to the nature of the original US Forest Service Fires data files from Redivi
 |---------------| -----------------|
 |[US_Fire_Causes.csv](./US_Fire_Causes.csv) | This file contains Description
 |[US_Fire_Causes_State.csv](./US_Fire_Causes_State.csv) | Description ... 
-|[US_Fire_Freq_Per_Year.csv](./US_Fire_Freq_Per_Year.csv) | This file contains the 
-total number of fires per year for each classification calculated from US_Fires_Compiled.csv data file from Redivis.
+|[US_Fire_Freq_Per_Year.csv](./US_Fire_Freq_Per_Year.csv) | This file contains the total number of fires per year for each classification calculated from US_Fires_Compiled.csv data file from Redivis.
 |[US_State_Fire_Year.csv](./US_State_Fire_Year.csv) | This file contains Description
 |[US_State_Fire_Year_New.csv](./US_State_Fire_Year_New.csv) | This file .. Description
 
