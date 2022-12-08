@@ -414,6 +414,15 @@ report_page_panel <- tabPanel(
     is almost double the peak of the first cycle. The trends in size classification
     B fires over this period closely mirrors the overall trend and range of values
     as the total fires graph."),
+  strong("2. 2. Which locations do forest fires most frequently occur?"),
+  strong("3. What is the most frequent cause of forest fires?"),
+  p("The pie chart reveals that Debris Burning is the main/most common cause of 
+    forest fires in the United States from 1992 to 2015. Within these 24 years, 
+    it was the top cause for 21 years. Lightning comes second for being top for 
+    two years, then Miscellaneous for one year. In 1992, Debris Burning caused 
+    12,729 fires, which was 18.7% among all causes. The value had been fluctuating 
+    through the years, but in 2015 it caused 18,339 fires (24.6%). “Structure” 
+    was consistently the least frequent cause within this time frame."),
   h3("Discussion:"),
   p("The trends in frequency of forest fires over the time period of 1992-2015 
     are characterized by a series of sharp increases mirrored by sharp declines.
