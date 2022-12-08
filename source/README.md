@@ -10,4 +10,5 @@ All of our project code is found in this directory.
 |[summary info](./summary_info.R) | This is the code that was used to compute the summary info on the exploratory analysis report page
 |[table info](./table_info.R) | This is the code that was used to compute the table info on the exploratory analysis report page
 |[data_slim.R](./data_slim.R) | This is the code that was used to slim down the original data file and output as new csv's stored in the data folder
+|[Interactive_Vis](./Interactive_Vis) | This folder contains all of the code used to build the shiny web application, including the server and ui files
 
