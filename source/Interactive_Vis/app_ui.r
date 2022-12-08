@@ -429,6 +429,8 @@ report_page_panel <- tabPanel(
     threat in the United States."),
   h3("Conclusion:"),
   h3("Acknowledgements:"),
+  p("We thank each other for the effort put into this project, our TA for support, 
+    and our Professor for guidance."),
   h3("References:"),
   strong("Research References:"),
   p("Popovich, Nadja, and Brad Plumer. 'As Wildfires Grow, Millions of Homes 
@@ -449,7 +451,6 @@ report_page_panel <- tabPanel(
   strong("Code References:"),
   p("'Scatter Plots on Maps in R.' Plotly| Graphing Libraries, 
     https://plotly.com/r/scatter-plots-on-maps/."),
-  h3("Appendix A:"),
 )
 
 ?toJSON
