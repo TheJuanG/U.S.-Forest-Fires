@@ -414,7 +414,17 @@ report_page_panel <- tabPanel(
     is almost double the peak of the first cycle. The trends in size classification
     B fires over this period closely mirrors the overall trend and range of values
     as the total fires graph."),
-  strong("2. 2. Which locations do forest fires most frequently occur?"),
+  strong("2. Which locations do forest fires most frequently occur?"),
+  p("From looking at the map for the past couple of years when accounting for all 
+    of the causes of fires we can see that typically it is California and Texas
+    that are the two states with the most fires per year. For example, in the most
+    recent year available (2015) Texas with the  most number of fires from any 
+    cause had 8304, and California, in second place, had 7365. When changing the
+    cause of fire to the most common cause of fires, debris burning, we see that
+    the top two states with the number of fires that have occurred due to it have
+    been Texas and Georgia in the past couple of years at least. Changing the 
+    cause we can see what locations have to worry about which causes more than 
+    others."),
   strong("3. What is the most frequent cause of forest fires?"),
   p("The pie chart reveals that Debris Burning is the main/most common cause of 
     forest fires in the United States from 1992 to 2015. Within these 24 years, 
@@ -424,19 +434,61 @@ report_page_panel <- tabPanel(
     through the years, but in 2015 it caused 18,339 fires (24.6%). “Structure” 
     was consistently the least frequent cause within this time frame."),
   h3("Discussion:"),
-  p("The trends in frequency of forest fires over the time period of 1992-2015 
-    are characterized by a series of sharp increases mirrored by sharp declines.
-    This indicates the natural cyclic behavior of wildfires. The aftermath of a 
-    forest fire leaves little debris leftover, so the likelihood of another fire
-    starting immediately after is low. This is seen in this visualization 
-    following a year or two with a huge increase in annual forest fires, the 
-    next year or two experience a decline. Comparing the scales of each fire 
-    size classification tells us that the majority of forest fires over this 
-    time period are small fires, and although larger fires occur on a much
-    smaller scale, the annual number of large fires has increased since 1992 
-    as of 2015. This indicates that smaller fires may actually be a greater 
-    threat in the United States."),
+  p("The trends in frequency of forest fires over the time period of 1992-2015 are
+    characterized by a series of sharp increases mirrored by sharp declines. This 
+    indicates the natural cyclic behavior of wildfires. The aftermath of a forest 
+    fire leaves little debris leftover, so the likelihood of another fire starting
+    immediately after is low. This is seen in this visualization following a year 
+    or two with a huge increase in annual forest fires, the next year or two 
+    experience a decline. Comparing the scales of each fire size classification 
+    tells us that the majority of forest fires over this time period are small
+    fires, and although larger fires occur on a much smaller scale, the annual 
+    number of large fires has increased since 1992 as of 2015. This indicates 
+    that smaller fires may actually be a greater threat in the United States. 
+    California and Texas being the top two states regularly that are at the top 
+    of number of forest fires means that those are the states who need to have
+    the best preparation for preventing the fires because while the fires do start
+    there and the people in those states are affected the effects of the fire 
+    could expand to effect states around where it began whether it be with smoke
+    bringing the air quality down or the fire just continuing outside of the state.
+    Seeing that when looking at the map with different causes of fires changes
+    which states are the ones with the highest number of fires shows that not 
+    all the locations deal with the same causes of fires meaning that there 
+    should be different preparations for different states depending on what they 
+    are most vulnerable for.  Forest fires leaving little debris leftover should
+    not be confused with debris burning. Fires that are caused by this come from
+    the attempts to clear land or burn crops and fields. Since the wind can carry
+    pieces that are still inflamed, it is not surprising that debris burning is
+    the most common cause of forest fires in the United States. "),
   h3("Conclusion:"),
+  p("Our project successfully allowed us to identify the trends in forest fires, 
+  the most vulnerable regions, and the most common causes. In the intro, we said 
+  how the intensity of the fires has increased from what it used to be which can 
+  be seen when looking at the fires over time chart and looking at the number of
+  fires that had a more than 5,000 acres perimeter we can see how the peaks of 
+  those fires have been higher than in the past showing how while the number of 
+  fires look like they have gone down, the intensity of those fires that do occur
+  is greater than it used to be. Because of this, the general public and other 
+  agencies who are concerned or affected by forest fires should be cautious so 
+  that more fires could be prevented to not let them become as intense as they 
+  have recently become. The most frequent cause of the fires has been burning 
+  debris, which is a human cause. Because it is a human cause there is a chance 
+  that we can help prevent more fires that occur due to debris burning if there
+  is a way to make people more cautious when burning debris or just stop them 
+  from burning debris altogether. If people are more cautious when they are
+  burning debris then they can avoid all the harms that come from forest fires 
+  started like smoke, air quality reduction, and even the destruction of their 
+  own homes. While we are not able to prevent every forest fire that occurs, we
+  can try and prevent ones that are caused by humans which we have the most 
+  control over from just preventing it from happening at all.
+ The map provides states with the number of fires per state depending on what 
+ cause and year are given. With this map wildfire agencies and fire departments 
+ can see what states are most vulnerable to what cause and be able to prepare 
+ and prevent them from starting or have a plan to contain them to reduce the 
+ intensity of fires if they do happen to occur. 
+  We hope that this project provided insight into forest fires in the U.S. to help
+  alleviate them and also the problem that happens because of them, whether it be 
+  to people living around them or the environment."),
   h3("Acknowledgements:"),
   p("We thank each other for the effort put into this project, our TA for support, 
     and our Professor for guidance."),
