@@ -107,7 +107,7 @@ intro_panel <- tabPanel(
 # Fires Over Time - investigating fire frequency
 
 # define following 
-fire_freq_per_yr <- read_csv('US_Fire_Freq_Per_Year.csv')
+
 class <- unique(fire_freq_per_yr$fire_size_class)
 
 
@@ -146,7 +146,6 @@ time_graph_panel <- tabPanel(
 # Map of Fires - investigating fire frequency per state
 
 # define following 
-fire_state_year <- read_csv('US_State_Fire_Year_New.csv')
 
 years_state <- unique(fire_state_year$fire_year)
 years_state <- sort(years_state, decreasing = FALSE)
@@ -199,7 +198,7 @@ years_state[1]
 # Bar Chart of Fire Causes - investigating most common fire causes
 
 # define following 
-fire_causes <- read_csv('US_Fire_Causes.csv')
+
 
 year_select <- unique(fire_causes$fire_year)
 
@@ -311,7 +310,12 @@ report_page_panel <- tabPanel(
     policy and fire prevention/management efforts."),
   h3("Problem Domain:"),
   strong("Background:"),
-  p(""),
+  p("Forest fires are becoming increasingly severe in intensity and frequency across the United States. 
+    According to the National Oceanic and Atmospheric Administration (NOAA), 
+    each wildfire season from 2020 to 2022 has greatly exceeded the average of 1.2 million 
+    acres burned since 2016 in the United States(NOAA, 2022). As these fires continue to 
+    evolve to become more aggressive in response drier and hotter climate, communities and 
+    the environment are threatened and lives are lost."),
   strong("Environmental Context:"),
   p("Human-caused global warming and climate change has resulted in record high
     temperatures and dryness that has resulted in devastating fires. In regions
